@@ -2,7 +2,7 @@
 
 # Table of contents
 - [Table of contents](#table-of-contents)
-- [Installation](#installation)
+- [Introduction to Database](#introduction-to-database)
 - [Usage](#usage)
 - [Development](#development)
 - [Contribute](#contribute)
@@ -11,7 +11,17 @@
 - [License](#license)
 - [Footer](#footer)
 
-# Installation
+# Introduction to Database
+### 1. What is DBMS (DB Management System) ?
+
+- Collection of programs to access & work with Database
+- Allows to update, query, delete entries in DB.
+- *2 Types* of **DBMS**:
+    - **Relational DB**: consists of 2 or more tables with columns (specific types of information) & rows (contains entries). Relationship between tables called `Schema`
+       - How relation
+    - **Relation DB**: consists of 2 or more tables with columns (specific types of information) & rows (contains entries). Relationship between tables called `Sche
+    - **Relation DB**: consists of 2 or more tables with columns (specific types of information) & rows (contains entries). Relationship between tables called `Schema`
+    - 
 [(Back to top)](#table-of-contents)
 
 
