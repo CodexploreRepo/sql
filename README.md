@@ -16,12 +16,20 @@
 
 - Collection of programs to access & work with Database
 - Allows to update, query, delete entries in DB.
-- *2 Types* of **DBMS**:
-    - **Relational DB**: consists of 2 or more tables with columns (specific types of information) & rows (contains entries). Relationship between tables called `Schema`
-       - How relation
-    - **Relation DB**: consists of 2 or more tables with columns (specific types of information) & rows (contains entries). Relationship between tables called `Sche
-    - **Relation DB**: consists of 2 or more tables with columns (specific types of information) & rows (contains entries). Relationship between tables called `Schema`
-    - 
+### 2. Types of DBMS:
+![sql_vs_nosql](https://user-images.githubusercontent.com/64508435/92753545-93f61280-f3bc-11ea-81d7-77181f2105b0.png)
+
+1. **Relational DB**: consists of 2 or more tables with columns (specific types of information) & rows (contains entries). Relationship between tables called `Schema`
+    - For example: PostgreSQL, MySQL, Access, TERADATA, ORACLE DB, etc
+    ![Screenshot 2020-09-10 at 11 02 23 PM](https://user-images.githubusercontent.com/64508435/92751029-33fe6c80-f3ba-11ea-9084-9c9470bc0eb3.png)
+
+- Relational DB communicates with Back-End Server via `SQL` (SQL plays a role like HTTP did btw Front-End & Back-End)
+
+2. **Non-Relational DB (NoSQL)**: allows you to build application without to define a clear Schema first.
+- `document-oriented` 
+- Non-Relational DB, such as MongoDB, communicates with Back-End Server via `MongoDB Query`
+
+
 [(Back to top)](#table-of-contents)
 
 
