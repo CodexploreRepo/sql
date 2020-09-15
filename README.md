@@ -41,7 +41,7 @@
 |Step |Description   |   
 |---|---|
 | Install PostgreSQL GUI  |  PSequel - Link: http://www.psequel.com/  |  
-|Install PostgreSQL| - Using Homebrew: paste this into Terminal: `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"`|
+|Install PostgreSQL|1. Install Homebrew (if not installed) > paste this into Terminal: <br> `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"`|
 
 
 [(Back to top)](#table-of-contents)
