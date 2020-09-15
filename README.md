@@ -4,6 +4,7 @@
 - [Table of contents](#table-of-contents)
 - [Introduction to Database](#introduction-to-database)
    - [Database Management System (DBMS)](#database-management-system) 
+   - [Types of DBMS: Relational & Non-Relational DB](#types-of-dbms) 
 - [Usage](#usage)
 - [Development](#development)
 - [Contribute](#contribute)
@@ -17,7 +18,7 @@
 
 - Collection of programs to access & work with Database
 - Allows to update, query, delete entries in DB.
-### 2. Types of DBMS:
+### Types of DBMS:
 ![sql_vs_nosql](https://user-images.githubusercontent.com/64508435/92753545-93f61280-f3bc-11ea-81d7-77181f2105b0.png)
 
 1. **Relational DB**: consists of 2 or more tables with columns (specific types of information) & rows (contains entries). Relationship between tables called `Schema`
