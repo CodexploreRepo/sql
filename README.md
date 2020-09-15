@@ -57,8 +57,8 @@
 |---|---|
 |Access SQL terminal| - Start PostgreSQL: `brew services start postgresql`<br> - Connect DB: `psql 'db_name'` |
 |||
-|Create Table||
-
+|Create Table| `CREATE TABLE users (name text, age smallint, birthday date);` <br> List of PostgreSQL Data Types: https://www.postgresql.org/docs/9.5/datatype.html|
+|List Table Relations| `\d`|
 [(Back to top)](#table-of-contents)
 # License
 [(Back to top)](#table-of-contents)
