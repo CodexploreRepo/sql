@@ -45,7 +45,7 @@
 | Install PostgreSQL | `brew install postgresql` |
 |||
 | Start PostgreSQL | `brew services start postgresql` |
-| Create a new DB| `createdb 'DB_name'` |
+| Create a new DB| `createdb 'db_name'` |
 | Connect DB via PostgreSQL GUI| ![image](https://user-images.githubusercontent.com/64508435/93224480-b795d000-f7a3-11ea-9cf6-38034c225ecb.png) |
 | Stop PostgreSQL | `brew services stop postgresql` |
 
