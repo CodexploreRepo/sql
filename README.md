@@ -5,6 +5,7 @@
 - [Introduction to Database](#introduction-to-database)
    - [Database Management System (DBMS)](#database-management-system) 
    - [Types of DBMS: Relational & Non-Relational DB](#types-of-dbms) 
+- [Relational Database: PostgreSQL](#relational-database)
 - [Usage](#usage)
 - [Development](#development)
 - [Contribute](#contribute)
@@ -31,10 +32,12 @@
 - `document-oriented` 
 - Non-Relational DB, such as MongoDB, communicates with Back-End Server via `MongoDB Query`
 
-
 [(Back to top)](#table-of-contents)
 
+# Relational Database: PostgreSQL
 
+
+[(Back to top)](#table-of-contents)
 # License
 [(Back to top)](#table-of-contents)
 
