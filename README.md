@@ -6,7 +6,7 @@
    - [Database Management System (DBMS)](#database-management-system) 
    - [Types of DBMS: Relational & Non-Relational DB](#types-of-dbms) 
 - [Relational Database: PostgreSQL](#relational-database-postgresql)
-   - [Install PostgreSQL](#install-postgresql) 
+   - [PostgreSQL 101](#postgresql-101) 
 - [Usage](#usage)
 - [Development](#development)
 - [Contribute](#contribute)
@@ -36,7 +36,7 @@
 [(Back to top)](#table-of-contents)
 
 # Relational Database PostgreSQL
-### Install PostgreSQL
+### PostgreSQL 101
 
 |Step |Description   |   
 |---|---|
@@ -45,6 +45,9 @@
 | Install PostgreSQL | `brew install postgresql` |
 |||
 | Start PostgreSQL | `brew services start postgresql` |
+| Create a new DB| `createdb 'DB_name'` |
+| Connect DB via PostgreSQL GUI| <img width="" alt="Screenshot 2020-09-15 at 10 32 11 PM" src="https://user-images.githubusercontent.com/64508435/93224252-7d2c3300-f7a3-11ea-95c0-c4b4adc4a3d4.png">
+|
 | Stop PostgreSQL | `brew services stop postgresql` |
 
 
