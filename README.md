@@ -6,6 +6,7 @@
    - [Database Management System (DBMS)](#database-management-system) 
    - [Types of DBMS: Relational & Non-Relational DB](#types-of-dbms) 
 - [Relational Database: PostgreSQL](#relational-database-postgresql)
+   - [Install PostgreSQL](#install-postgresql) 
 - [Usage](#usage)
 - [Development](#development)
 - [Contribute](#contribute)
@@ -35,6 +36,12 @@
 [(Back to top)](#table-of-contents)
 
 # Relational Database PostgreSQL
+### Install PostgreSQL
+
+|Step |Description   |   
+|---|---|
+| Install PostgreSQL GUI  |  PSequel - Link: http://www.psequel.com/  |  
+|Install PostgreSQL| - Using Homebrew: paste this into Terminal: `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"`|
 
 
 [(Back to top)](#table-of-contents)
