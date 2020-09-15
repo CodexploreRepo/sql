@@ -34,7 +34,7 @@
 
 [(Back to top)](#table-of-contents)
 
-# Relational Database: PostgreSQL
+# Relational Database PostgreSQL
 
 
 [(Back to top)](#table-of-contents)
