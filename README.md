@@ -42,6 +42,10 @@
 |---|---|
 | Install PostgreSQL GUI  |  PSequel - Link: http://www.psequel.com/  |  
 |Install Homebrew (if not installed)| *HomeBrew*: cài thứ bạn cần mà Apple không cung cấp<br>- To install, Paste this into Terminal: <br> `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"`<br>-Update: `brew update`<br>-If some file missing: `brew doctor`|
+| Install PostgreSQL | `brew install postgresql` |
+|||
+| Start PostgreSQL | `brew services start postgresql` |
+| Stop PostgreSQL | `brew services stop postgresql` |
 
 
 [(Back to top)](#table-of-contents)
