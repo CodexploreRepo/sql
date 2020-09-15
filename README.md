@@ -57,8 +57,10 @@
 |---|---|
 |Access SQL terminal| - Start PostgreSQL: `brew services start postgresql`<br> - Connect DB: `psql 'db_name'` |
 |||
-|Create Table| `CREATE TABLE users (name text, age smallint, birthday date);` <br> List of PostgreSQL Data Types: https://www.postgresql.org/docs/9.5/datatype.html|
+|Create Table| <br> `CREATE TABLE users (name text, age smallint, birthday date);`<br><br> List of PostgreSQL Data Types: https://www.postgresql.org/docs/9.5/datatype.html|
 |List Table Relations| `\d`|
+| Insert Into | `INSERT INTO users (name, age, birthday) VALUES ('Quan Nguyen', 25, '1995-09-10');` |
+| Select data| `SELECT name, age, birthday FROM users;` <br>`SELECT * FROM users;`|
 [(Back to top)](#table-of-contents)
 # License
 [(Back to top)](#table-of-contents)
