@@ -46,7 +46,8 @@
 |||
 | Start PostgreSQL | `brew services start postgresql` |
 | Create a new DB| `createdb 'db_name'` |
-| Connect DB via PostgreSQL GUI| ![image](https://user-images.githubusercontent.com/64508435/93224480-b795d000-f7a3-11ea-9cf6-38034c225ecb.png) |
+| Connect DB | `psql 'db_name'` |
+| Connect DB via PostgreSQL GUI| You also can connect to PostgreSQL via GUI by providing `db_name` <img src="https://user-images.githubusercontent.com/64508435/93224480-b795d000-f7a3-11ea-9cf6-38034c225ecb.png" width="500"> |
 | Stop PostgreSQL | `brew services stop postgresql` |
 
 
