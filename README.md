@@ -5,7 +5,7 @@
 - [Introduction to Database](#introduction-to-database)
    - [Database Management System (DBMS)](#database-management-system) 
    - [Types of DBMS: Relational & Non-Relational DB](#types-of-dbms) 
-- [Relational Database: PostgreSQL](#relational-database)
+- [Relational Database: PostgreSQL](#relational-database-postgreSQL)
 - [Usage](#usage)
 - [Development](#development)
 - [Contribute](#contribute)
