@@ -3,6 +3,7 @@
 # Table of contents
 - [Table of contents](#table-of-contents)
 - [Introduction to Database](#introduction-to-database)
+   - [Database Management System (DBMS)](#database-management-system) 
 - [Usage](#usage)
 - [Development](#development)
 - [Contribute](#contribute)
@@ -12,7 +13,7 @@
 - [Footer](#footer)
 
 # Introduction to Database
-### 1. What is DBMS (DB Management System) ?
+### Database Management System
 
 - Collection of programs to access & work with Database
 - Allows to update, query, delete entries in DB.
