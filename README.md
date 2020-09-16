@@ -61,7 +61,7 @@
 |List Table Relations| `\d`|
 | Insert Into | `INSERT INTO users (name, age, birthday) VALUES ('Quan Nguyen', 25, '1995-09-10');` |
 | Select data| `SELECT name, age, birthday FROM users;` <br>`SELECT * FROM users;`|
-| Alter Table | Add columns into Table<br> `ALTER TABLE users ADD score smallint;`|
+| Alter Table | Add column, for ex: `score` colummn, into Table<br> `ALTER TABLE users ADD score smallint;`|
 | Update data | `UPDATE users SET score = 50 WHERE name='Thuy Dung' OR name='Quan';`|
 
 
