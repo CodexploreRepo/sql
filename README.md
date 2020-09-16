@@ -60,9 +60,9 @@
 |Create Table| <br> `CREATE TABLE users (name text, age smallint, birthday date);`<br><br> List of PostgreSQL Data Types: https://www.postgresql.org/docs/9.5/datatype.html|
 |List Table Relations| `\d`|
 | Insert Into | `INSERT INTO users (name, age, birthday) VALUES ('Quan Nguyen', 25, '1995-09-10');` |
-| Select data| `SELECT name, age, birthday FROM users;` <br>`SELECT * FROM users;`|
+| Select Data| `SELECT name, age, birthday FROM users;` <br>`SELECT * FROM users;`|
 | Alter Table | Add column, for ex: `score` column, into Table<br> `ALTER TABLE users ADD score smallint;`|
-| Update data | `UPDATE users SET score = 50 WHERE name='Thuy Dung' OR name='Quan';`|
+| Update Data | `UPDATE users SET score = 50 WHERE name='Thuy Dung' OR name='Quan';`|
 
 
 [(Back to top)](#table-of-contents)
