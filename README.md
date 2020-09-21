@@ -70,7 +70,8 @@
 |SQL: Functions| - Calculate **AVG()**<br>`SELECT AVG(score) FROM users;` <br> - Calculate **SUM()** <br> - **COUNT()**|
 | Alter Table | Add column, for ex: `score` column, into Table<br> `ALTER TABLE users ADD score smallint;`|
 | Update Data | `UPDATE users SET score = 50 WHERE name='Thuy Dung' OR name='Quan';`|
-
+| Delete Data |`DELETE FROM users WHERE name='Thuy Dung';`|
+| Delete Table | `DROP TABLE login;`|
 
 ### Joining Tables
 
@@ -92,6 +93,15 @@ CREATE TABLE login (
     public | login        | table    | quannguyen
     public | login_id_seq | sequence | quannguyen
    ```
+
+#### Joining SQL commands
+
+` SELECT * FROM users JOIN login ON users.name = login.name;`
+```
+   name    | age |  birthday  | score | id | secret |   name    
+-----------+-----+------------+-------+----+--------+-----------
+ Thuy Dung |  24 | 1996-09-22 |    50 |  2 | xyz    | Thuy Dung
+```
 
 
 [(Back to top)](#table-of-contents)
