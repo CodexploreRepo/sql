@@ -72,6 +72,7 @@
 | Update Data | `UPDATE users SET score = 50 WHERE name='Thuy Dung' OR name='Quan';`|
 | Delete Data |`DELETE FROM users WHERE name='Thuy Dung';`|
 | Delete Table | `DROP TABLE login;`|
+| Delete DB | `DROP DATABASE db_name;`|
 
 ### Joining Tables
 
