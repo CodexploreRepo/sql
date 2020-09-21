@@ -71,6 +71,15 @@
 | Update Data | `UPDATE users SET score = 50 WHERE name='Thuy Dung' OR name='Quan';`|
 
 
+```
+CREATE TABLE login (
+    ID serial NOT NULL PRIMARY KEY,
+    secret VARCHAR(100) NOT NULL,
+    name text UNIQUE NOT NULL
+);
+```
+- ID: `serial` allows to auto increment the ID
+
 [(Back to top)](#table-of-contents)
 # License
 [(Back to top)](#table-of-contents)
