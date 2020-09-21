@@ -8,6 +8,7 @@
 - [Relational Database: PostgreSQL](#relational-database-postgresql)
    - [PostgreSQL 101](#postgresql-101) 
       - [SQL commands](#sql-commands)
+   - [Joining Tables](#joining-tables) 
 - [Usage](#usage)
 - [Development](#development)
 - [Contribute](#contribute)
@@ -71,6 +72,8 @@
 | Update Data | `UPDATE users SET score = 50 WHERE name='Thuy Dung' OR name='Quan';`|
 
 
+### Joining Tables
+
 ```
 CREATE TABLE login (
     ID serial NOT NULL PRIMARY KEY,
@@ -78,7 +81,18 @@ CREATE TABLE login (
     name text UNIQUE NOT NULL
 );
 ```
-- ID: `serial` allows to auto increment the ID
+- ID: 
+   - `serial` allows to auto increment the ID
+   - `PRIMARY KEY` generates a `login_id_seq` 
+   ```
+   test_db=# \d
+                  List of relations
+    Schema |     Name     |   Type   |   Owner    
+   --------+--------------+----------+------------
+    public | login        | table    | quannguyen
+    public | login_id_seq | sequence | quannguyen
+   ```
+
 
 [(Back to top)](#table-of-contents)
 # License
