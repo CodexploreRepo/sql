@@ -14,6 +14,7 @@
 - [Contribute](#contribute)
     - [Sponsor](#sponsor)
     - [Adding new features or fixing bugs](#adding-new-features-or-fixing-bugs)
+- [LeetCode](#Leetcode)
 - [License](#license)
 - [Footer](#footer)
 
@@ -104,8 +105,27 @@ CREATE TABLE login (
  Thuy Dung |  24 | 1996-09-22 |    50 |  2 | xyz    | Thuy Dung
 ```
 
-
+##### LEFT JOIN
+- `LEFT JOIN` returns all records from the left table (table1), and the matched records from the right table (table2). The result is NULL from the right side, if there is no match.
+```
+SELECT column_name(s)
+FROM table1
+LEFT JOIN table2
+ON table1.column_name = table2.column_name;
+```
 [(Back to top)](#table-of-contents)
+
+
+# LeetCode
+### 175. Combine Two Tables
+Write a SQL query for a report that provides the following information for each person in the `Person` table, regardless if there is an address for each of those people:
+(FirstName, LastName) from Person table and  (City, State) from Address table.
+
+```SQL
+SELECT Person.FirstName, Person.LastName, Address.City , Address.State
+FROM Person LEFT JOIN Address ON Person.PersonID = Address.PersonID;
+```
+
 # License
 [(Back to top)](#table-of-contents)
 
