@@ -128,7 +128,7 @@ FROM Person LEFT JOIN Address ON Person.PersonID = Address.PersonID;
 
 ### 176. Second Highest Salary
 Write a SQL query to get the `second highest salary` from the Employee table. If there is no second highest salary, then the query should return `null`.
-- Learn: `IFNULL((expression), null)`, `DISTINCT`, `LIMIT with OFFSET`, Header return using `AS`
+- Learn: `IFNULL((SELECT expression), null)`, `DISTINCT`, `LIMIT with OFFSET`, Header return using `AS`
 ```SQL
 SELECT
 IFNULL ((SELECT DISTINCT Salary
