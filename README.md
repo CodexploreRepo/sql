@@ -118,12 +118,23 @@ ON table1.column_name = table2.column_name;
 
 # LeetCode
 ### 175. Combine Two Tables
-Write a SQL query for a report that provides the following information for each person in the `Person` table, regardless if there is an address for each of those people:
-(FirstName, LastName) from Person table and  (City, State) from Address table.
+Write a SQL query for a report that provides the following information for each person in the `Person` table, regardless if there is an address for each of those people: (FirstName, LastName) from Person table and  (City, State) from Address table.
+- Learn: `LEFT JOIN`
 
 ```SQL
 SELECT Person.FirstName, Person.LastName, Address.City , Address.State
 FROM Person LEFT JOIN Address ON Person.PersonID = Address.PersonID;
+```
+
+### 176. Second Highest Salary
+Write a SQL query to get the `second highest salary` from the Employee table. If there is no second highest salary, then the query should return `null`.
+- Learn: `IFNULL((expression), null)`, `DISTINCT`, `LIMIT with OFFSET`, Header return using `AS`
+```SQL
+SELECT
+IFNULL ((SELECT DISTINCT Salary
+FROM Employee
+ORDER BY Salary Desc
+LIMIT 1 OFFSET 1),NULL) AS SecondHighestSalary;
 ```
 
 # License
