@@ -9,7 +9,7 @@
    - [PostgreSQL 101](#postgresql-101) 
       - [SQL commands](#sql-commands)
    - [Joining Tables](#joining-tables) 
-- [Usage](#usage)
+- [SQL Function](#sql-function)
 - [Development](#development)
 - [Contribute](#contribute)
     - [Sponsor](#sponsor)
@@ -115,6 +115,17 @@ ON table1.column_name = table2.column_name;
 ```
 [(Back to top)](#table-of-contents)
 
+# SQL Function
+- A template of an SQL Function
+```sql
+CREATE FUNCTION functionName(N INT) RETURNS INT
+BEGIN
+<--Body-->
+RETURN (
+<--Select SQL Statement-->
+);
+END
+```
 
 # LeetCode
 ### 175. Combine Two Tables
@@ -136,6 +147,20 @@ FROM Employee
 ORDER BY Salary Desc
 LIMIT 1 OFFSET 1),NULL) AS SecondHighestSalary;
 ```
+### 177. Nth Highest Salary
+Write a SQL query to get the nth highest salary from the Employee table.
+- Learn: `LIMIT 1 OFFSET M = LIMIT M, 1`, DECLARE M INT;
+```SQL
+CREATE FUNCTION getNthHighestSalary(N INT) RETURNS INT
+BEGIN
+DECLARE M INT;
+SET M=N-1;
+RETURN (
+    # Write your MySQL query statement below.
+    SELECT DISTINCT Salary FROM Employee ORDER BY Salary DESC LIMIT M, 1);
+END
+```
+
 
 # License
 [(Back to top)](#table-of-contents)
