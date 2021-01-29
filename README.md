@@ -184,6 +184,18 @@ RETURN (
     SELECT DISTINCT Salary FROM Employee ORDER BY Salary DESC LIMIT M, 1);
 END
 ```
+### 181. Employees Earning More Than Their Managers
+Given the Employee table, write a SQL query that finds out employees who earn more than their managers.
+- Learn: [Cartesian Product](#cartesian-product)
+- Solution 1: Cartesian Product
+```SQL
+# Write your MySQL query statement below
+SELECT a.Name AS `Employee`
+FROM Employee AS a, Employee AS b
+WHERE a.ManagerId = b.Id AND a.Salary > b.Salary;
+```
+- Solution 2: LEFT JOIN
+
 
 
 # License
