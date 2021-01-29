@@ -10,7 +10,7 @@
       - [SQL commands](#sql-commands)
    - [Joining Tables](#joining-tables) 
 - [SQL Function](#sql-function)
-- [Development](#development)
+- [Cartesian Product](#cartesian-product)
 - [Contribute](#contribute)
     - [Sponsor](#sponsor)
     - [Adding new features or fixing bugs](#adding-new-features-or-fixing-bugs)
@@ -126,6 +126,30 @@ RETURN (
 );
 END
 ```
+
+# Cartesian product
+- A Cartesian product joins every record in the first table with every record in the second table, 
+- For example, ince the table has 4 rows and it's joined with itself => the output will be 4*4 = 16 records
+
+```SQL
+SELECT *
+FROM Employee AS a, Employee AS b;
+```
+- Before : the default `Employee` Table
+```
++----+-------+--------+-----------+
+| Id | Name  | Salary | ManagerId |
++----+-------+--------+-----------+
+| 1  | Joe   | 70000  | 3         |
+| 2  | Henry | 80000  | 4         |
+| 3  | Sam   | 60000  | NULL      |
+| 4  | Max   | 90000  | NULL      |
++----+-------+--------+-----------+
+```
+
+- After : Cartesian product 
+<img width="648" alt="Screenshot 2021-01-29 at 8 32 13 AM" src="https://user-images.githubusercontent.com/64508435/106215750-942c6880-620c-11eb-8d40-b8c7715bccbb.png">
+
 
 # LeetCode
 ### 175. Combine Two Tables
