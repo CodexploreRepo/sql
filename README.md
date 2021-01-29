@@ -189,14 +189,17 @@ Given the Employee table, write a SQL query that finds out employees who earn mo
 - Learn: [Cartesian Product](#cartesian-product)
 - Solution 1: Cartesian Product
 ```SQL
-# Write your MySQL query statement below
 SELECT a.Name AS `Employee`
 FROM Employee AS a, Employee AS b
 WHERE a.ManagerId = b.Id AND a.Salary > b.Salary;
 ```
 - Solution 2: LEFT JOIN
-
-
+```SQL
+SELECT a.Name as 'Employee'
+FROM Employee AS a LEFT JOIN Employee AS b 
+ON a.ManagerId = b.Id 
+WHERE a.Salary > b.Salary;
+```
 
 # License
 [(Back to top)](#table-of-contents)
