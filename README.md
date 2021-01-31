@@ -201,6 +201,24 @@ ON a.ManagerId = b.Id
 WHERE a.Salary > b.Salary;
 ```
 
+### 182. Duplicate Emails
+
+Write a SQL query to find all duplicate emails in a table named Person.
+- Learn: 
+   - `HAVING` clause was added to SQL because the `WHERE` keyword could not be used with aggregate functions like `COUNT`
+   - to add a condition to a `GROUP BY` is to use the `HAVING` clause
+
+```SQL
+# Write your MySQL query statement below
+SELECT Email
+FROM Person
+GROUP BY Email
+HAVING COUNT(Email) > 1;
+```
+
+
+
+
 # License
 [(Back to top)](#table-of-contents)
 
