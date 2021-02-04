@@ -216,10 +216,16 @@ FROM Person
 GROUP BY Email
 HAVING COUNT(Email) > 1;
 ```
-
-
-
-
+### 183. Customers Who Never Order
+Suppose that a website contains two tables, the Customers table and the Orders table. Write a SQL query to find all customers who never order anything.
+- Learn:
+   - `IS NULL` : to check if any entry is NULL
+```SQL
+SELECT c.Name AS 'Customers'
+FROM Customers AS c LEFT JOIN Orders AS o 
+ON c.Id = o.CustomerId  
+WHERE o.CustomerId IS NULL;
+```
 # License
 [(Back to top)](#table-of-contents)
 
