@@ -207,6 +207,7 @@ Write a SQL query to find all duplicate emails in a table named Person.
 - Learn: 
    - `HAVING` clause was added to SQL because the `WHERE` keyword could not be used with aggregate functions like `COUNT`
    - to add a condition to a `GROUP BY` is to use the `HAVING` clause
+   - Order: `WHERE` > `GROUP BY` >  `HAVING` 
 
 ```SQL
 # Write your MySQL query statement below
