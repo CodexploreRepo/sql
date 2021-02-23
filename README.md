@@ -226,6 +226,27 @@ FROM Customers AS c LEFT JOIN Orders AS o
 ON c.Id = o.CustomerId  
 WHERE o.CustomerId IS NULL;
 ```
+
+### 196. Delete Duplicate Emails
+Write a SQL query to delete all duplicate email entries in a table named Person, keeping only unique emails based on its smallest Id.
+- Learn #1: How to Delete an Item in SQL 
+- Learn #2: SELECT FROM ( SELECT FROM )
+
+```SQL
+# Write your MySQL query statement below
+DELETE FROM PERSON WHERE Id NOT IN (
+    SELECT Id FROM (
+        SELECT MIN(id) as Id 
+        FROM Person
+        GROUP BY Email
+    ) t
+);
+
+
+```
+
+
+
 # License
 [(Back to top)](#table-of-contents)
 
