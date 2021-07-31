@@ -2,9 +2,9 @@
 
 # Table of contents
 - [Table of contents](#table-of-contents)
-- [Introduction to Database](#introduction-to-database)
-   - [Database Management System (DBMS)](#database-management-system) 
-   - [Types of DBMS: Relational & Non-Relational DB](#types-of-dbms) 
+- [1. Introduction to Database](#1-introduction-to-database)
+   - [1.1. Database Management System (DBMS)](#11-database-management-system) 
+   - [1.2. Types of DBMS: Relational & Non-Relational DB](#12-types-of-dbms) 
 - [Relational Database: PostgreSQL](#relational-database-postgresql)
    - [PostgreSQL 101](#postgresql-101) 
       - [SQL commands](#sql-commands)
@@ -18,12 +18,12 @@
 - [License](#license)
 - [Footer](#footer)
 
-# Introduction to Database
-### Database Management System
+# 1. Introduction to Database
+### 1.1. Database Management System
 
 - Collection of programs to access & work with Database
 - Allows to update, query, delete entries in DB.
-### Types of DBMS:
+### 1.2. Types of DBMS:
 ![sql_vs_nosql](https://user-images.githubusercontent.com/64508435/92753545-93f61280-f3bc-11ea-81d7-77181f2105b0.png)
 
 1. **Relational DB**: consists of 2 or more tables with columns (specific types of information) & rows (contains entries). Relationship between tables called `Schema`
@@ -43,7 +43,7 @@
 #### Database Creation & Connectivity
 |Step |Description   |   
 |---|---|
-| Install PostgreSQL GUI  |  PSequel - Link: http://www.psequel.com/  |  
+| Install PostgreSQL GUI  | Link: https://www.postgresql.org/download/  |  
 |Install Homebrew (if not installed)| *HomeBrew*: cài thứ bạn cần mà Apple không cung cấp<br>- To install, Paste this into Terminal: <br> `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"`<br>-Update: `brew update`<br>-If some file missing: `brew doctor`|
 | Install PostgreSQL | `brew install postgresql` |
 |||
