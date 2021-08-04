@@ -6,16 +6,12 @@
    - [1.1. Database Management System (DBMS)](#11-database-management-system) 
    - [1.2. Types of DBMS: Relational & Non-Relational DB](#12-types-of-dbms) 
       - [1.2.1. Relational Database: PostgreSQL](#121-relational-database-postgresql)
-- [SQL commands](#sql-commands)
+- [2. SQL commands](#2-sql-commands)
    - [Joining Tables](#joining-tables) 
 - [SQL Function](#sql-function)
 - [Cartesian Product](#cartesian-product)
-- [Contribute](#contribute)
-    - [Sponsor](#sponsor)
-    - [Adding new features or fixing bugs](#adding-new-features-or-fixing-bugs)
 - [LeetCode](#Leetcode)
-- [License](#license)
-- [Footer](#footer)
+
 
 # 1. Introduction to Database
 ### 1.1. Database Management System
@@ -23,11 +19,12 @@
 - Collection of programs to access & work with Database
 - Allows to update, query, delete entries in DB.
 ### 1.2. Types of DBMS:
-![sql_vs_nosql](https://user-images.githubusercontent.com/64508435/92753545-93f61280-f3bc-11ea-81d7-77181f2105b0.png)
+
+<p align="center"><img src="https://user-images.githubusercontent.com/64508435/92753545-93f61280-f3bc-11ea-81d7-77181f2105b0.png" alt="drawing" height="250"/></p>
 
 1. **Relational DB**: consists of 2 or more tables with columns (specific types of information) & rows (contains entries). Relationship between tables called `Schema`
     - For example: PostgreSQL, MySQL, Access, TERADATA, ORACLE DB, etc
-    ![Screenshot 2020-09-10 at 11 02 23 PM](https://user-images.githubusercontent.com/64508435/92751029-33fe6c80-f3ba-11ea-9084-9c9470bc0eb3.png)
+ <p align="center"><img src="https://user-images.githubusercontent.com/64508435/92751029-33fe6c80-f3ba-11ea-9084-9c9470bc0eb3.png" alt="drawing" height="200"/></p>
 
 - Relational DB communicates with Back-End Server via `SQL` (SQL plays a role like HTTP did btw Front-End & Back-End)
 
@@ -38,8 +35,7 @@
 [(Back to top)](#table-of-contents)
 
 #### 1.2.1. Relational Database PostgreSQL
-
-#### Database Creation & Connectivity
+##### Database Creation & Connectivity
 |Step |Description   |   
 |---|---|
 | Install PostgreSQL GUI  | Link: https://www.postgresql.org/download/  |  
@@ -52,7 +48,17 @@
 | Connect DB via PostgreSQL GUI| You also can connect to PostgreSQL via GUI by providing `db_name` <img src="https://user-images.githubusercontent.com/64508435/93224480-b795d000-f7a3-11ea-9cf6-38034c225ecb.png" width="500"> |
 | Stop PostgreSQL | `brew services stop postgresql` |
 
-#### SQL commands
+[(Back to top)](#table-of-contents)
+
+
+# 2. SQL commands
+<p align="center"><img src="https://user-images.githubusercontent.com/64508435/128194707-4511d049-bcdc-4823-925f-56d6509a18b6.png" alt="drawing" height="350"/></p>
+
+- **DCL** (Data Control Language): `GRANT` or `REVOKE` access.
+- **DDL** (Data Definition Language): to setup the data
+- **DQL** (Data Query Language)
+- **DML** (Data Modification Language): to modified the data in database
+
 
 | Function| Commands|
 |---|---|
