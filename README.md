@@ -5,9 +5,8 @@
 - [1. Introduction to Database](#1-introduction-to-database)
    - [1.1. Database Management System (DBMS)](#11-database-management-system) 
    - [1.2. Types of DBMS: Relational & Non-Relational DB](#12-types-of-dbms) 
-- [Relational Database: PostgreSQL](#relational-database-postgresql)
-   - [PostgreSQL 101](#postgresql-101) 
-      - [SQL commands](#sql-commands)
+      - [1.2.1. Relational Database: PostgreSQL](#121-relational-database-postgresql)
+- [SQL commands](#sql-commands)
    - [Joining Tables](#joining-tables) 
 - [SQL Function](#sql-function)
 - [Cartesian Product](#cartesian-product)
@@ -38,8 +37,8 @@
 
 [(Back to top)](#table-of-contents)
 
-# Relational Database PostgreSQL
-### PostgreSQL 101
+#### 1.2.1. Relational Database PostgreSQL
+
 #### Database Creation & Connectivity
 |Step |Description   |   
 |---|---|
