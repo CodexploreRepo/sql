@@ -72,6 +72,7 @@
 ||Select Data with column 'name' starts with Q<br> `SELECT * FROM users WHERE name LIKE 'Q%';`|
 ||Select Data with column 'name' ends with g<br> `SELECT * FROM users WHERE name LIKE '%g';`|
 ||Order Data `DESC` & `ASC`<br>`SELECT * FROM users ORDER BY score DESC;`<br>|
+| Rename Data | `SELECT column AS 'new_name'`|
 |||
 |SQL: Functions| - Calculate **AVG()**<br>`SELECT AVG(score) FROM users;` <br> - Calculate **SUM()** <br> - **COUNT()**|
 | Alter Table | Add column, for ex: `score` column, into Table<br> `ALTER TABLE users ADD score smallint;`|
