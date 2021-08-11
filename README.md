@@ -5,20 +5,22 @@
 - [1. Introduction to Database](#1-introduction-to-database)
    - [1.1. Database Management System (DBMS)](#11-database-management-system) 
    - [1.2. Types of DBMS: Relational & Non-Relational DB](#12-types-of-dbms) 
-      - [1.2.1. Relational Database: PostgreSQL](#121-relational-database-postgresql)
 - [2. SQL commands](#2-sql-commands)
+   - [2.1. Basics SQL commands](#21-basics-sql-commands) 
    - [Joining Tables](#joining-tables) 
 - [SQL Function](#sql-function)
 - [Cartesian Product](#cartesian-product)
 - [LeetCode](#Leetcode)
+- [Appendix](#appendix)
+   - [A1. Relational Database: PostgreSQL](#A1-relational-database-postgresql) 
 
 
 # 1. Introduction to Database
-### 1.1. Database Management System
+## 1.1. Database Management System
 
 - Collection of programs to access & work with Database
 - Allows to update, query, delete entries in DB.
-### 1.2. Types of DBMS:
+## 1.2. Types of DBMS:
 
 <p align="center"><img src="https://user-images.githubusercontent.com/64508435/92753545-93f61280-f3bc-11ea-81d7-77181f2105b0.png" alt="drawing" height="250"/></p>
 
@@ -34,22 +36,6 @@
 
 [(Back to top)](#table-of-contents)
 
-#### 1.2.1. Relational Database PostgreSQL
-##### Database Creation & Connectivity
-|Step |Description   |   
-|---|---|
-| Install PostgreSQL GUI  | Link: https://www.postgresql.org/download/  |  
-|Install Homebrew (if not installed)| *HomeBrew*: cài thứ bạn cần mà Apple không cung cấp<br>- To install, Paste this into Terminal: <br> `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"`<br>-Update: `brew update`<br>-If some file missing: `brew doctor`|
-| Install PostgreSQL | `brew install postgresql` |
-|||
-| Start PostgreSQL | `brew services start postgresql` |
-| Create a new DB| `createdb 'db_name'` |
-| Connect DB | `psql 'db_name'` |
-| Connect DB via PostgreSQL GUI| You also can connect to PostgreSQL via GUI by providing `db_name` <img src="https://user-images.githubusercontent.com/64508435/93224480-b795d000-f7a3-11ea-9cf6-38034c225ecb.png" width="500"> |
-| Stop PostgreSQL | `brew services stop postgresql` |
-
-[(Back to top)](#table-of-contents)
-
 
 # 2. SQL commands
 <p align="center"><img src="https://user-images.githubusercontent.com/64508435/128194707-4511d049-bcdc-4823-925f-56d6509a18b6.png" alt="drawing" height="350"/></p>
@@ -58,7 +44,7 @@
 - **DDL** (Data Definition Language): to setup the data
 - **DQL** (Data Query Language)
 - **DML** (Data Modification Language): to modified the data in database
-
+## 2.1. Basics SQL commands
 
 | Function| Commands|
 |---|---|
@@ -252,5 +238,20 @@ DELETE FROM PERSON WHERE Id NOT IN (
 
 ```
 
+# Appendix
+## A1. Relational Database PostgreSQL
+## Database Creation & Connectivity
+|Step |Description   |   
+|---|---|
+| Install PostgreSQL GUI  | Link: https://www.postgresql.org/download/  |  
+|Install Homebrew (if not installed)| *HomeBrew*: cài thứ bạn cần mà Apple không cung cấp<br>- To install, Paste this into Terminal: <br> `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"`<br>-Update: `brew update`<br>-If some file missing: `brew doctor`|
+| Install PostgreSQL | `brew install postgresql` |
+|||
+| Start PostgreSQL | `brew services start postgresql` |
+| Create a new DB| `createdb 'db_name'` |
+| Connect DB | `psql 'db_name'` |
+| Connect DB via PostgreSQL GUI| You also can connect to PostgreSQL via GUI by providing `db_name` <img src="https://user-images.githubusercontent.com/64508435/93224480-b795d000-f7a3-11ea-9cf6-38034c225ecb.png" width="500"> |
+| Stop PostgreSQL | `brew services stop postgresql` |
 
+[(Back to top)](#table-of-contents)
 
