@@ -74,7 +74,8 @@
 | Delete Table | `DROP TABLE login;`|
 | Delete DB | `DROP DATABASE db_name;`|
 ## 2.2. Filtering Data
-
+- `WHERE` Clause must **AFTER** `FROM`
+- Logic Operators: `AND`, `OR`, `NOT`
 ## 2.3. Joining Tables
 
 ```
