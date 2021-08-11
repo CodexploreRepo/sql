@@ -6,7 +6,8 @@
    - [1.1. Database Management System (DBMS)](#11-database-management-system) 
    - [1.2. Types of DBMS: Relational & Non-Relational DB](#12-types-of-dbms) 
 - [2. SQL commands](#2-sql-commands)
-   - [2.1. Basic SQL commands](#21-basic-sql-commands) 
+   - [2.1. Basic SQL commands](#21-basic-sql-commands)
+   - [2.2. Filtering Data](#22-filtering-data)  
    - [2.3. Joining Tables](#23-joining-tables) 
 - [SQL Function](#sql-function)
 - [Cartesian Product](#cartesian-product)
@@ -45,7 +46,8 @@
 - **DQL** (Data Query Language)
 - **DML** (Data Modification Language): to modified the data in database
 ## 2.1. Basic SQL commands
-
+- `' '` used for **writing text** 
+- `" "` used for **Tables**
 | Function| Commands|
 |---|---|
 |Access SQL terminal| - Start PostgreSQL: `brew services start postgresql`<br> - Connect DB: `psql 'db_name'` |
@@ -70,6 +72,7 @@
 | Delete Data |`DELETE FROM users WHERE name='Thuy Dung';`|
 | Delete Table | `DROP TABLE login;`|
 | Delete DB | `DROP DATABASE db_name;`|
+## 2.2. Filtering Data
 
 ## 2.3. Joining Tables
 
