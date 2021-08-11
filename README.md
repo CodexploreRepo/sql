@@ -46,8 +46,9 @@
 - **DQL** (Data Query Language)
 - **DML** (Data Modification Language): to modified the data in database
 ## 2.1. Basic SQL commands
-- `' '` used for **writing text** 
-- `" "` used for **Tables**
+- `' '` used for **Writing Text** 
+- `" "` used for **Tables, Columns's Name**: `SELECT birth_date AS "DoB" FROM "public"."employees" WHERE first_name = 'Quan';`
+
 | Function| Commands|
 |---|---|
 |Access SQL terminal| - Start PostgreSQL: `brew services start postgresql`<br> - Connect DB: `psql 'db_name'` |
