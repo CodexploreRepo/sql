@@ -61,7 +61,7 @@
 | Rename Data | `SELECT column AS 'new_name'`|
 | Concat Column|`SELECT CONCAT(first_name, ' ', last_name) as "Full Name" FROM employees;` <br>**Note**: use `''` in `CONCAT()` Statement as `""` is used in other SQL statement |
 |||
-|SQL: Functions| - Calculate **AVG()**<br>`SELECT AVG(score) FROM users;` <br> - Calculate **SUM()** <br> - **COUNT()**, **MIN()**, **MAX()**<br>- Aggregate Functions: [Exercise](./questions/0_Agrregate_Functions.sql)|
+|Aggregate Functions| - Calculate **AVG()**<br>`SELECT AVG(score) FROM users;` <br> - Calculate **SUM()** <br> - **COUNT()**, **MIN()**, **MAX()**<br>- Practise: [Exercise](./questions/0_Agrregate_Functions.sql)|
 |||
 |Comment| - Inline Comment `--` <br>- Block Comment `/* */` |
 |||
