@@ -6,7 +6,7 @@
    - [1.1. Database Management System (DBMS)](#11-database-management-system) 
    - [1.2. Types of DBMS: Relational & Non-Relational DB](#12-types-of-dbms) 
 - [2. SQL commands](#2-sql-commands)
-   - [2.1. Basics SQL commands](#21-basics-sql-commands) 
+   - [2.1. Basic SQL commands](#21-basic-sql-commands) 
    - [2.3. Joining Tables](#23-joining-tables) 
 - [SQL Function](#sql-function)
 - [Cartesian Product](#cartesian-product)
@@ -44,7 +44,7 @@
 - **DDL** (Data Definition Language): to setup the data
 - **DQL** (Data Query Language)
 - **DML** (Data Modification Language): to modified the data in database
-## 2.1. Basics SQL commands
+## 2.1. Basic SQL commands
 
 | Function| Commands|
 |---|---|
@@ -62,6 +62,9 @@
 | Concat Column|`SELECT CONCAT(first_name, ' ', last_name) as "Full Name" FROM employees;` <br>**Note**: use `''` in `CONCAT()` Statement as `""` is used in other SQL statement |
 |||
 |SQL: Functions| - Calculate **AVG()**<br>`SELECT AVG(score) FROM users;` <br> - Calculate **SUM()** <br> - **COUNT()**, **MIN()**, **MAX()**<br>- Aggregate Functions: [Exercise](./questions/0_Agrregate_Functions.sql)|
+|||
+|Comment| - Inline Comment `--` <br>- Block Comment `/* */` |
+|||
 | Alter Table | Add column, for ex: `score` column, into Table<br> `ALTER TABLE users ADD score smallint;`|
 | Update Data | `UPDATE users SET score = 50 WHERE name='Thuy Dung' OR name='Quan';`|
 | Delete Data |`DELETE FROM users WHERE name='Thuy Dung';`|
