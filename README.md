@@ -73,6 +73,7 @@
 ||Select Data with column 'name' ends with g<br> `SELECT * FROM users WHERE name LIKE '%g';`|
 ||Order Data `DESC` & `ASC`<br>`SELECT * FROM users ORDER BY score DESC;`<br>|
 | Rename Data | `SELECT column AS 'new_name'`|
+| Concat Column|`SELECT CONCAT(first_name, ' ', last_name) as "Full Name" FROM employees;` <br>**Note**: use `''` in `CONCAT()` Statement as `""` is used in other SQL statement |
 |||
 |SQL: Functions| - Calculate **AVG()**<br>`SELECT AVG(score) FROM users;` <br> - Calculate **SUM()** <br> - **COUNT()**|
 | Alter Table | Add column, for ex: `score` column, into Table<br> `ALTER TABLE users ADD score smallint;`|
