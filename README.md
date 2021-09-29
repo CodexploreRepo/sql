@@ -8,8 +8,9 @@
 - [2. SQL commands](#2-sql-commands)
    - [2.1. Basic SQL commands](#21-basic-sql-commands)
    - [2.2. Filtering Data](#22-filtering-data)  
-   - [2.3. Joining Tables](#23-joining-tables) 
-- [SQL Function](#sql-function)
+   - [2.3. Joining Tables](#23-joining-tables)
+- [3. Frequently-used SQL commands](#3-frequently-used-sql-commands)
+- [4. SQL Function](#4-sql-function)
 - [Cartesian Product](#cartesian-product)
 - [LeetCode](#Leetcode)
 - [Appendix](#appendix)
@@ -116,7 +117,11 @@ ON table1.column_name = table2.column_name;
 ```
 [(Back to top)](#table-of-contents)
 
-# SQL Function
+# 3. Frequently-used SQL commands
+
+[(Back to top)](#table-of-contents)
+
+# 4. SQL Function
 - A template of an SQL Function
 ```sql
 CREATE FUNCTION functionName(N INT) RETURNS INT
