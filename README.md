@@ -118,6 +118,14 @@ ON table1.column_name = table2.column_name;
 [(Back to top)](#table-of-contents)
 
 # 3. Frequently-used SQL commands
+| Function          | Description |Commands|
+|-------------------|-------------|--------|
+| `DISTINCT`        | Exclude duplicates from the answer| `SELECT DISTINCT(City) FROM Station;`|
+| Odd & Even Number | `%, =, <>`| `SELECT City FROM Station WHERE Id % 2 <> 0;` <br>Select rows where ID are odd numbers|
+| `COUNT`           | Count the number of record| `SELECT COUNT(City) - COUNT(DISTINCT(City)) FROM Station;`<br>Find the difference between the total number of CITY entries in the table and the number of distinct CITY entries in the table.|
+|`LENGTH`           | Count the word-length|`SELECT City, LENGTH(City) FROM Station`|
+|`TOP`              | Select first few items, similar to df.head() in pandas| `SELECT TOP number or percent column_name(s);`<br> Select the first three records from the "Customers" <br>`SELECT TOP 3 * FROM Customers;`<br>Select the first 50% of the records from the "Customers"<br>`SELECT TOP 50 PERCENT * FROM Customers;`|
+|`LIMIT`            | Limit the record, similar to TOP, but need to `ORDER BY`| `SELECT City, LENGTH(City) AS Length_City FROM Station ORDER BY Length_City ASC, City ASC LIMIT 1;`<br> If there is more than one smallest length of city name, choose the one that comes first when ordered alphabetically.|
 
 [(Back to top)](#table-of-contents)
 
