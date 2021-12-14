@@ -5,7 +5,8 @@ ISSS615 - Data Management
 - [1. Introduction to Database](#1-introduction-to-database)
    - [1.1. Important Concepts](#11-important-concepts)
    - [1.2. Database Management System](#12-database-management-system)
-   - [ 1.3 Types of DB](#13-types-of-db)
+   - [1.3 Types of DB](#13-types-of-db)
+   - [1.4. Life Cycle of a Database](#14-life-cycle-of-a-database)
 - [2. SQL commands](#2-sql-commands)
    - [2.1. Basic SQL commands](#21-basic-sql-commands)
    - [2.2. Filtering Data](#22-filtering-data)  
@@ -52,6 +53,8 @@ ISSS615 - Data Management
 - **Desktop DBMS**: Access
 - **Open Source DBMS**: MySQ: (Apple, Sun, SAP, Dell, Intel, Novell)
 
+[(Back to top)](#table-of-contents)
+
 ## 1.3 Types of DB
 <p align="center"><img src="https://user-images.githubusercontent.com/64508435/92753545-93f61280-f3bc-11ea-81d7-77181f2105b0.png" alt="drawing" height="250"/></p>
 
@@ -64,6 +67,40 @@ ISSS615 - Data Management
 2. **Non-Relational DB (NoSQL)**: allows you to build application without to define a clear Schema first.
    - `document-oriented` 
    - Non-Relational DB, such as MongoDB, communicates with Back-End Server via `MongoDB Query`
+
+## 1.4. Life Cycle of a Database
+- **1. Planning**: what is the pros and cons of building a DB? What are the specification of the data to be stored?
+- **2a. Conceptual modeling/Analysis**: 
+   - List of business rules (bullet points) in plain English that the organization requires
+   - Produce ER diagram based on those rules
+- **2b. Database design/Logical DB design**
+   - Input: ER diagram
+   - Output: Relational schema/logical diagram
+- **3a. DB implementation**:
+   - Input: Relational schema
+   - Write SQL queries 
+- **3b. DB maintenance**
+   - Modify the DB to reflect thew new needs/change of business needs (management to decide with change in business needs, to start a new DB or change current DB)
+
+### 1.4.1. Conceptual Database Design
+- Business Rules
+- E-R Model
+- Entities
+- Attributes
+- Relationships
+#### Business Rules
+- e.g. build a DB for SIS to keep track of students, courses &#8594; Rules:
+   - 1 course can have multiple students
+   - Maximum of 50 students per class
+- Guidlines for Business Rules:
+   - **Declarative**: each session only max 50 students. Don’t care how
+   - **Precise**: as clear as possible to avoid misunderstanding
+   - **Atomic**: one statement per rule
+   - **Consistent**: No 2 rules conflict each other, and not contradict itself
+   - **Expressible**: Can be written and understandable in English
+   - **Distinct**: no redundant rule
+   - **Business Oriented**: Understood by business student
+
 
 [(Back to top)](#table-of-contents)
 
