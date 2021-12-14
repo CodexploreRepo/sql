@@ -1,8 +1,11 @@
 # Database
-
+ISSS615 - Data Management
 # Table of contents
 - [Table of contents](#table-of-contents)
 - [1. Introduction to Database](#1-introduction-to-database)
+   - [1.1. Important Concepts](#11-important-concepts)
+   - [1.2. Database Management System](#12-database-management-system)
+   - [ 1.3 Types of DB](#13-types-of-db)
 - [2. SQL commands](#2-sql-commands)
    - [2.1. Basic SQL commands](#21-basic-sql-commands)
    - [2.2. Filtering Data](#22-filtering-data)  
@@ -10,29 +13,57 @@
 - [3. Frequently-used SQL commands](#3-frequently-used-sql-commands)
 - [4. SQL Function](#4-sql-function)
 - [Cartesian Product](#cartesian-product)
-- [LeetCode](#Leetcode)
+- [LeetCode](#leetcode)
 - [Appendix](#appendix)
    - [A1. Relational Database: PostgreSQL](#A1-relational-database-postgresql) 
 
 
 # 1. Introduction to Database
-## 1.1. Database Management System
+## 1.1. Important Concepts
+### 1.1.1. Keywords
+- `Data`: stored representations of meaningful objects and events
+   - Structured: numbers, text, dates
+   - Unstructured: images, video, documents
+- `Information`: data processed to increase knowledge in the person using the data
+- `Metadata`: data that describes the properties and context of user data
+- `Database`: organized collection of logically related data
 
-- Collection of programs to access & work with Database
-- Allows to update, query, delete entries in DB.
-## 1.2. Types of DBMS:
+<p align="center"><img height="180" alt="Screenshot 2021-12-14 at 21 06 31" src="https://user-images.githubusercontent.com/64508435/146015444-e63bc1c2-d243-4aae-a0ef-47957b26c184.png"></p>
 
+
+### 1.1.2. Databases vs. Data Warehouses
+- Data Warehouse: An integrated decision support database whose content is derived from the various operational databases. 
+   - Support information processing by providing a solid platform of consolidated, historical data for analysis 
+
+<p align="center"><img width="849" alt="Screenshot 2021-12-14 at 21 06 31" src="https://user-images.githubusercontent.com/64508435/146013652-05d3ef69-bdc5-44e5-85b4-b456b81e7b98.png"></p>
+
+## 1.2. Database Management System
+- `Database Management System` (DBMS): a data storage and retrieval system which permits data to be stored non-redundantly while making it appear to the user as if the data is well-integrated
+   - Applications cannot directly touch your data, only DBMS can do that
+   - **Benefit**: Program – data independence. When a program interact with data, the program don’t need to care where/how the data is stored. &#8594; application development is faster and less costly
+ 
+<p align="center"><img width="350" alt="Screenshot 2021-12-14 at 21 24 04" src="https://user-images.githubusercontent.com/64508435/146016554-f4175862-5e90-422e-856d-5b7afb8502b4.png"></p>
+
+### 1.2.1. DBMS Market Place
+- **Enterprise DBMS**
+   - Oracle: dominates in Unix; strong in Windows
+   - Microsoft SQL Server: strong in Windows
+   - DB2: strong in mainframe environment
+- **Desktop DBMS**: Access
+- **Open Source DBMS**: MySQ: (Apple, Sun, SAP, Dell, Intel, Novell)
+
+## 1.3 Types of DB
 <p align="center"><img src="https://user-images.githubusercontent.com/64508435/92753545-93f61280-f3bc-11ea-81d7-77181f2105b0.png" alt="drawing" height="250"/></p>
 
 1. **Relational DB**: consists of 2 or more tables with columns (specific types of information) & rows (contains entries). Relationship between tables called `Schema`
     - For example: PostgreSQL, MySQL, Access, TERADATA, ORACLE DB, etc
  <p align="center"><img src="https://user-images.githubusercontent.com/64508435/92751029-33fe6c80-f3ba-11ea-9084-9c9470bc0eb3.png" alt="drawing" height="200"/></p>
 
-- Relational DB communicates with Back-End Server via `SQL` (SQL plays a role like HTTP did btw Front-End & Back-End)
+   - Relational DB communicates with Back-End Server via `SQL` (SQL plays a role like HTTP did btw Front-End & Back-End)
 
 2. **Non-Relational DB (NoSQL)**: allows you to build application without to define a clear Schema first.
-- `document-oriented` 
-- Non-Relational DB, such as MongoDB, communicates with Back-End Server via `MongoDB Query`
+   - `document-oriented` 
+   - Non-Relational DB, such as MongoDB, communicates with Back-End Server via `MongoDB Query`
 
 [(Back to top)](#table-of-contents)
 
