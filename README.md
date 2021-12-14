@@ -3,8 +3,6 @@
 # Table of contents
 - [Table of contents](#table-of-contents)
 - [1. Introduction to Database](#1-introduction-to-database)
-   - [1.1. Database Management System (DBMS)](#11-database-management-system) 
-   - [1.2. Types of DBMS: Relational & Non-Relational DB](#12-types-of-dbms) 
 - [2. SQL commands](#2-sql-commands)
    - [2.1. Basic SQL commands](#21-basic-sql-commands)
    - [2.2. Filtering Data](#22-filtering-data)  
