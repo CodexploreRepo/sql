@@ -101,6 +101,15 @@ ISSS615 - Data Management
    - **Distinct**: no redundant rule
    - **Business Oriented**: Understood by business student
 
+#### E-R Model
+- **Entity-Relationship Model (E-R Model)**: a logical representation of the data for an organization or for a business area
+- **Entity-Relationship Diagram (E-R Diagram)**: a graphical representation of an entity-relationship model
+   - `Entity (Entity Type)` is a Rectangle box (collection of objects that share common properties or characteristics)
+   - `Attributes` are written inside each box
+   - `Relationships` are drawn as lines that connect entities
+
+<p align="center"><img width="523" alt="Screenshot 2021-12-14 at 22 11 13" src="https://user-images.githubusercontent.com/64508435/146024992-0777673e-345f-44ac-9e30-e03e4ce7bb43.png"></p>
+
 
 [(Back to top)](#table-of-contents)
 
