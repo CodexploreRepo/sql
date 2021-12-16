@@ -7,6 +7,10 @@ ISSS615 - Data Management
    - [1.2. Database Management System](#12-database-management-system)
    - [1.3 Types of DB](#13-types-of-db)
    - [1.4. Life Cycle of a Database](#14-life-cycle-of-a-database)
+   - [1.5. ER Model](#15-er-model)
+      - [1.5.1. Entity](#151-entity)
+      - [1.5.2. Attributes](#152-attributes)
+      - [1.5.3. Relationships](#153-relationships)
 - [2. SQL commands](#2-sql-commands)
    - [2.1. Basic SQL commands](#21-basic-sql-commands)
    - [2.2. Filtering Data](#22-filtering-data)  
@@ -101,14 +105,40 @@ ISSS615 - Data Management
    - **Distinct**: no redundant rule
    - **Business Oriented**: Understood by business student
 
-#### E-R Model
+## 1.5. ER Model
 - **Entity-Relationship Model (E-R Model)**: a logical representation of the data for an organization or for a business area
 - **Entity-Relationship Diagram (E-R Diagram)**: a graphical representation of an entity-relationship model
    - `Entity (Entity Type)` is a Rectangle box (collection of objects that share common properties or characteristics)
    - `Attributes` are written inside each box
    - `Relationships` are drawn as lines that connect entities
-
 <p align="center"><img width="523" alt="Screenshot 2021-12-14 at 22 11 13" src="https://user-images.githubusercontent.com/64508435/146024992-0777673e-345f-44ac-9e30-e03e4ce7bb43.png"></p>
+
+### 1.5.1. Entity
+- **Entity (Entity Type)**: A person, place, object, event, or concept in the user environment about which the organization wishes to maintain data
+- Entity name is in *singular form*: Student, not Students
+### 1.5.2. Attributes
+- **Attribute**: property or characteristic of an entity type
+- Classification of attributes:
+   - Simple vs. **Composite Attribute** (made up of multiple component attributes, denoted as: `composite attribute (comp attr 1, comp attr 2, etc)`)
+   - Single-Valued vs. **Multi-valued Attribute** (denoted as: `{multi-valued attribute}`)
+   - Stored vs. **Derived Attributes** (attributes that can be derived from other attributes & *Derived attributes will not be stored*, denoted as: `[derived_attributes]`)
+      - Assumption: To standardize the requirement, all the derived attributes must be included into ER models
+<p align="center"><img width="523" alt="Screenshot 2021-12-16 at 21 55 31" src="https://user-images.githubusercontent.com/64508435/146394735-684e6aa7-0098-407b-8fdb-705c53ada6ae.png"></p>
+
+- `Employee_Address` is composite attribute, made up of component attributes: street address, city, state, postal code.
+<p align="center"><img width="620" alt="Screenshot 2021-12-16 at 22 07 50" src="https://user-images.githubusercontent.com/64508435/146396695-829b0a36-1d41-49f8-89eb-e4f77fb961cd.png"></p>
+
+- Derived attributes are attributes that can be derived from other attributes, in this case is from date employed and current date, denoted as: `[years_employed]`
+
+   - **Identifier Attributes**: *uniquely* identifies individual instances of an entity type,  denoted as: **Underline**
+      - Simple Identifier vs. Composite Identifier (For example: Flight_ID (Flight number, Date))
+      - For example: in Student entity, Name is not a good identifier candidate as many students can have the same name, Student ID is a possible identifier as it is unique. 
+
+<p align="center"><img width="573" alt="Screenshot 2021-12-16 at 22 18 22" src="https://user-images.githubusercontent.com/64508435/146398353-d0855de8-082d-4c12-a7b7-1ae1614a90bc.png"></p>
+
+### 1.5.3. Relationships
+
+
 
 
 [(Back to top)](#table-of-contents)
