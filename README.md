@@ -105,6 +105,8 @@ ISSS615 - Data Management
    - **Distinct**: no redundant rule
    - **Business Oriented**: Understood by business student
 
+[(Back to top)](#table-of-contents)
+
 ## 1.5. ER Model
 - **Entity-Relationship Model (E-R Model)**: a logical representation of the data for an organization or for a business area
 - **Entity-Relationship Diagram (E-R Diagram)**: a graphical representation of an entity-relationship model
@@ -137,8 +139,22 @@ ISSS615 - Data Management
 <p align="center"><img width="573" alt="Screenshot 2021-12-16 at 22 18 22" src="https://user-images.githubusercontent.com/64508435/146398353-d0855de8-082d-4c12-a7b7-1ae1614a90bc.png"></p>
 
 ### 1.5.3. Relationships
+- Relationships can have attributes
+- Two entities can have more than one type of relationship between them (multiple relationships)
+- **Degree of a relationship**: Number of entities participating in the relationship
+   - Unary Relationship
+   - Binary Relationship
+   - Ternary Relationship, or higher
+   <p align="center"><img width="621" alt="Screenshot 2021-12-16 at 22 32 47" src="https://user-images.githubusercontent.com/64508435/146400768-c281a1fb-f8e2-4884-815e-b9ad8e1a03b6.png"></p>
 
+- **Cardinality of relationship**: Number of instances of one entity that can or must be associated with each instance of another entity
+   - `One – to – One`: Each entity in the relationship will have exactly one related entity
+   - `One – to – Many`: An entity on one side of the relationship can have many related entities, but an entity on the other side will have a maximum of one related entity
+   - `Many – to – Many`: Entities on both sides of the relationship can have many related entities on the other side
+<p align="center"><img width="577" alt="Screenshot 2021-12-16 at 22 36 28" src="https://user-images.githubusercontent.com/64508435/146401360-37d64d1c-3c77-48a1-99d3-34199180dff7.png"></p>
 
+   - **Cardinality Constraints** - the number of instances of one entity that can or must be associated with each instance of another entity
+<p align="center"><img width="629" alt="Screenshot 2021-12-16 at 22 43 04" src="https://user-images.githubusercontent.com/64508435/146402541-1e95e6dc-561a-4355-9067-4477c2a35d18.png"></p>
 
 
 [(Back to top)](#table-of-contents)
