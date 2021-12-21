@@ -11,6 +11,7 @@ ISSS615 - Data Management
       - [1.5.1. Entity](#151-entity)
       - [1.5.2. Attributes](#152-attributes)
       - [1.5.3. Relationships](#153-relationships)
+   - [1.6. Enhanced ER](#16-enhanced-er)
 - [2. SQL commands](#2-sql-commands)
    - [2.1. Basic SQL commands](#21-basic-sql-commands)
    - [2.2. Filtering Data](#22-filtering-data)  
@@ -163,6 +164,33 @@ ISSS615 - Data Management
 
 [(Back to top)](#table-of-contents)
 
+## 1.6. Enhanced ER
+### 1.6.1. Supertype and Subtype
+- **Supertype**: A generic entity type that has a relationship with one or more subtypes
+- **Subtype**: A subgrouping of the entities in an entity type which has attributes that are distinct from those in other subgroupings
+- *Inheritance*:
+   - Subtype entities inherit values of all attributes of the supertype
+   - An instance of a subtype is also an instance of the supertype
+- For example: Car, Truck, and Motor Cycle share the common attributes. So, we *generalize* the shared attributes in a **supertype**. Unique attributes are still with **subtypes**.
+   - All instances of car will inherit all attributes & identifier of vehicle + special attribute No_of_passengers
+   - Subtypes: Car & Truck
+   - Each circle is connected to exactly one Supertype and one or many subtypes
+   - Note: **2 subtypes (motorbike & bike) with no special attribute, we DO NOT draw any of them.**
+<p align="center"><img width="500" alt="Screenshot 2021-12-21 at 17 18 51" src="https://user-images.githubusercontent.com/64508435/146913315-5a37087f-8b4a-4627-a88e-d7af7bdf1eac.png">
+<img width="300" alt="Screenshot 2021-12-21 at 17 42 35" src="https://user-images.githubusercontent.com/64508435/146916808-21a2ff86-3cf3-471f-8853-facaf60ced45.png"></p>
+
+### 1.6.2. Generalization and Specialization
+- **Generalization**: The process of defining a more general entity type from a set of more specialized entity types- `BOTTOM-UP`
+- **Specialization**: The process of defining one or more subtypes of the supertype, and forming supertype/subtype relationships- `TOP-DOWN`
+
+
+
+#### Relationship & Supertypes
+- Relationships at the supertype level indicate that all subtypes will participate in the relationship
+<p align="center"><img width="500" alt="Screenshot 2021-12-21 at 17 57 53" src="https://user-images.githubusercontent.com/64508435/146919001-489af95a-816d-4e94-9168-d9e757bb26ca.png"></p>
+
+
+[(Back to top)](#table-of-contents)
 
 # 2. SQL commands
 <p align="center"><img src="https://user-images.githubusercontent.com/64508435/128194707-4511d049-bcdc-4823-925f-56d6509a18b6.png" alt="drawing" height="350"/></p>
