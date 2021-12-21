@@ -179,15 +179,54 @@ ISSS615 - Data Management
 <p align="center"><img width="500" alt="Screenshot 2021-12-21 at 17 18 51" src="https://user-images.githubusercontent.com/64508435/146913315-5a37087f-8b4a-4627-a88e-d7af7bdf1eac.png">
 <img width="300" alt="Screenshot 2021-12-21 at 17 42 35" src="https://user-images.githubusercontent.com/64508435/146916808-21a2ff86-3cf3-471f-8853-facaf60ced45.png"></p>
 
+#### Relationship & Supertypes
+- Relationships at the supertype level indicate that all subtypes will participate in the relationship
+<p align="center"><img width="500" alt="Screenshot 2021-12-21 at 17 57 53" src="https://user-images.githubusercontent.com/64508435/146919001-489af95a-816d-4e94-9168-d9e757bb26ca.png"></p>
+
+
 ### 1.6.2. Generalization and Specialization
 - **Generalization**: The process of defining a more general entity type from a set of more specialized entity types- `BOTTOM-UP`
 - **Specialization**: The process of defining one or more subtypes of the supertype, and forming supertype/subtype relationships- `TOP-DOWN`
 
+### 1.6.3.Constraints in Supertype
+#### 1.6.3.1. Completeness Constraints
+- Whether an instance of a supertype must also be a member of at least one subtype
+   - `Total Specialization Rule` (Double line): Supertype cannot have its own instances 
+   - `Partial Specialization Rule` (Single line): Supertype can have own instances 
+<p align="center">
+<img width="500" alt="Screenshot 2021-12-21 at 22 46 17" src="https://user-images.githubusercontent.com/64508435/146958480-abbe6dfd-967a-46a1-b868-860b3898259c.png"><br>Example: Total Specialization Rule
+</p>
 
+<p align="center">
+<img width="500" alt="Screenshot 2021-12-21 at 22 46 17" src="https://user-images.githubusercontent.com/64508435/146958915-66296824-55c3-430e-9914-8191644bba5f.png"><br>Example: Partial Specialization Rule
+</p>
 
-#### Relationship & Supertypes
-- Relationships at the supertype level indicate that all subtypes will participate in the relationship
-<p align="center"><img width="500" alt="Screenshot 2021-12-21 at 17 57 53" src="https://user-images.githubusercontent.com/64508435/146919001-489af95a-816d-4e94-9168-d9e757bb26ca.png"></p>
+#### 1.6.3.2. Disjointness Constraints
+- Whether an instance of a supertype may simultaneously be a member of two (or more) subtypes
+   - `Disjoint Rule`: An instance of the supertype can be only ONE of the subtypes (represented by “`d`”)
+   - `Overlap Rule`: An instance of the supertype could be more than one of the subtypes (represented by “`o`”)
+
+<p align="center">
+<img width="500" alt="Screenshot 2021-12-21 at 22 46 17" src="https://user-images.githubusercontent.com/64508435/146959675-348ead81-46d3-455b-8bb2-452d5d23ce50.png"><br>Example: Disjoint Rule
+</p>
+<p align="center">
+<img width="500" alt="Screenshot 2021-12-21 at 22 46 17" src="https://user-images.githubusercontent.com/64508435/146959941-611399f5-8c08-43c0-86dd-f5561d696754.png"><br>Example: Overlap Rule
+</p>
+
+#### 1.6.3.3. Subtype Discriminators
+- An attribute of the supertype whose values determine the target subtype(s)
+   - Disjoint – a simple attribute with alternative values to indicate the possible subtypes
+   - Overlapping – a composite attribute whose subparts pertain to different subtypes. Each subpart contains a boolean value to indicate whether or not the instance belongs to the associated subtype
+- Requirement: **All the ER models with supertype/subtype must have** `Subtype Discriminator`
+<p align="center">
+<img width="500" alt="Screenshot 2021-12-21 at 22 46 17" src="https://user-images.githubusercontent.com/64508435/146961055-b4ca5122-52b2-4b1e-b810-72ecf2c87c02.png"><br>Example: Introducing a subtype discriminator (disjoint rule)
+</p>
+<p align="center">
+<img width="500" alt="Screenshot 2021-12-21 at 22 46 17" src="https://user-images.githubusercontent.com/64508435/146961129-78ce6ddb-1c3e-414d-beb0-bec363c6fc93.png"><br>Example: Subtype discriminator (overlap rule)
+</p>
+
+- If overlap, then the discriminator will be a composite of Boolean value
+- If total specialisation, Type will be (Y,Y) (Y,N), (N,Y), cannot have (N,N)
 
 
 [(Back to top)](#table-of-contents)
