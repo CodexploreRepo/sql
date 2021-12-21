@@ -141,6 +141,10 @@ ISSS615 - Data Management
 ### 1.5.3. Relationships
 - Relationships can have attributes
 - Two entities can have more than one type of relationship between them (multiple relationships)
+- **Relationship with Attributes**: When the attributes depend on all the entities that participate in the relationship, the attributes belong to the relationship
+   - For example: Each employee has a common `Complete_Date` and a common `Grade` for all the courses he/she completes
+   <p align="center"><img width="527" alt="Screenshot 2021-12-21 at 16 45 11" src="https://user-images.githubusercontent.com/64508435/146908309-50ccc82b-ae69-4b55-8d98-87d31b509c35.png"></p>
+
 - **Degree of a relationship**: Number of entities participating in the relationship
    - Unary Relationship
    - Binary Relationship
