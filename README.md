@@ -395,5 +395,16 @@ DELETE FROM PERSON WHERE Id NOT IN (
 | Connect DB via PostgreSQL GUI| You also can connect to PostgreSQL via GUI by providing `db_name` <img src="https://user-images.githubusercontent.com/64508435/93224480-b795d000-f7a3-11ea-9cf6-38034c225ecb.png" width="500"> |
 | Stop PostgreSQL | `brew services stop postgresql` |
 
+## MySQL
+Link: https://flaviocopes.com/mysql-how-to-install/
+```Python
+mysql.server start
+mysql -u root -p #This is to connect to mySQL server via Root user
+
+mysql.server stop
+
+
+```
+
 [(Back to top)](#table-of-contents)
 
