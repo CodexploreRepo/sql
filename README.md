@@ -253,7 +253,7 @@ ISSS615 - Data Management
 | Select Data| `SELECT name, age, birthday FROM users;` <br>`SELECT * FROM users;`|
 ||Select Data with column 'name' starts with Q<br> `SELECT * FROM users WHERE name LIKE 'Q%';`|
 ||Select Data with column 'name' ends with g<br> `SELECT * FROM users WHERE name LIKE '%g';`|
-||Order Data `DESC` & `ASC`<br>`SELECT * FROM users ORDER BY score DESC;`<br>|
+|Sort|Order Data `DESC` & `ASC`<br>`SELECT * FROM users ORDER BY score DESC;`<br>|
 | Rename Data | `SELECT column AS 'new_name'`|
 | Concat Column|`SELECT CONCAT(first_name, ' ', last_name) as "Full Name" FROM employees;` <br>**Note**: use `''` in `CONCAT()` Statement as `""` is used in other SQL statement |
 |||
@@ -269,6 +269,33 @@ ISSS615 - Data Management
 ## 2.2. Filtering Data
 - `WHERE` Clause must **AFTER** `FROM`
 - Logic Operators: `AND`, `OR`, `NOT`
+
+### 2.2.1 CASE STATEMENT
+- The `CASE` statement like an if-then-else statement.
+```Python
+CASE
+    WHEN condition1 THEN result1
+    WHEN condition2 THEN result2
+    WHEN conditionN THEN resultN
+    ELSE result
+END;
+```
+- Write a query identifying the type of each record in the TRIANGLES table using its three side lengths "Isosceles, Equilateral, Scalene".
+```SQL
+SELECT 
+    CASE
+        WHEN A+B > C AND A+C > B AND B+C > A THEN
+        CASE
+            WHEN A = B AND A = C THEN "Equilateral"
+            WHEN A = B OR B = C OR A = C THEN "Isosceles"
+            ELSE "Scalene"
+        END
+        ELSE "Not A Triangle"
+    END
+FROM TRIANGLES;
+
+```
+
 ## 2.3. Joining Tables
 
 ```
