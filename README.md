@@ -346,6 +346,8 @@ ON table1.column_name = table2.column_name;
 |`LENGTH`           | Count the word-length|`SELECT City, LENGTH(City) FROM Station`|
 |`TOP`              | Select first few items, similar to df.head() in pandas| `SELECT TOP number or percent column_name(s);`<br> Select the first three records from the "Customers" <br>`SELECT TOP 3 * FROM Customers;`<br>Select the first 50% of the records from the "Customers"<br>`SELECT TOP 50 PERCENT * FROM Customers;`|
 |`LIMIT`            | Limit the record, similar to TOP, but need to `ORDER BY`| `SELECT City, LENGTH(City) AS Length_City FROM Station ORDER BY Length_City ASC, City ASC LIMIT 1;`<br> If there is more than one smallest length of city name, choose the one that comes first when ordered alphabetically.|
+|`REPLACE`| To replace certain char in a column| `SELECT CEILING(AVG(SALARY) - AVG(REPLACE(SALARY, 0 ,''))) FROM EMPLOYEES;` <br> To replace 0 with '' in a Salary column |
+
 
 [(Back to top)](#table-of-contents)
 
