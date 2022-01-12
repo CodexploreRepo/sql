@@ -258,6 +258,7 @@ ISSS615 - Data Management
 | Concat Column|`SELECT CONCAT(first_name, ' ', last_name) as "Full Name" FROM employees;` <br>**Note**: use `''` in `CONCAT()` Statement as `""` is used in other SQL statement |
 |||
 |Aggregate Functions| - Calculate **AVG()**<br>`SELECT AVG(score) FROM users;` <br> - Calculate **SUM()** <br> - **COUNT()**, **MIN()**, **MAX()**<br>- Practise: [Exercise](./questions/0_Agrregate_Functions.sql)|
+|Round Up/Down|`FLOOR(), CEILING()`|
 |||
 |Comment| - Inline Comment `--` <br>- Block Comment `/* */` |
 |||
