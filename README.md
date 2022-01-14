@@ -109,6 +109,7 @@ ISSS615 - Data Management
 [(Back to top)](#table-of-contents)
 
 ## 1.5. ER Model
+- Tool to draw ER Diagram: draw.io
 - **Entity-Relationship Model (E-R Model)**: a logical representation of the data for an organization or for a business area
 - **Entity-Relationship Diagram (E-R Diagram)**: a graphical representation of an entity-relationship model
    - `Entity (Entity Type)` is a Rectangle box (collection of objects that share common properties or characteristics)
