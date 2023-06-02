@@ -1,3 +1,9 @@
+# SQL Daily Knowledge
+## Day 2
+- `CAST col AS data_type` casting column Data Type
+    - Example: `a.category_id = CAST(b.id AS INT)`
+## Day 1
+
 ```sql
 /* Math */
 -- Even ID number     => (ID%2)=0
