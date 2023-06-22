@@ -1,5 +1,34 @@
 # SQL Daily Knowledge
 ## Day 1
+### SQL Stacking
+```sql
+--original df
+/*
++---+-----+-----+-----+
+|id |team1|team2|team3|
++---+-----+-----+-----+
+|1  |30   |300  |3000 |
+|2  |50   |500  |5000 |
+|3  |100  |1000 |10000|
+|4  |200  |2000 |20000|
++---+-----+-----+-----+
+*/
+-- where 3 is total number of cols to be stacked into single row, in this case is 3 (team1, team2, team3)
+SELECT id, STACK(3, 'team1_new', team1, 'team2_new', team2, 'team3_new', team3) AS (team, points) FROM df
+-- Result
+/*
++---+---------+------+
+| id|     team|points|
++---+---------+------+
+|  1|team1_new|    30|
+|  1|team2_new|   300|
+|  1|team3_new|  3000|
+|  2|team1_new|    50|
+......................
++---+---------+------+
+*/
+
+```
 ### Type Casting
 - `CAST col AS data_type` casting column Data Type
     - Example: `where a.category_id = CAST(b.id AS INT)` as id from table b does not have the same data type INT as category_id of table a
