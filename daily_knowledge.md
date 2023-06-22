@@ -1,9 +1,9 @@
 # SQL Daily Knowledge
-## Day 2
-- `CAST col AS data_type` casting column Data Type
-    - Example: `a.category_id = CAST(b.id AS INT)`
 ## Day 1
-
+### Type Casting
+- `CAST col AS data_type` casting column Data Type
+    - Example: `where a.category_id = CAST(b.id AS INT)` as id from table b does not have the same data type INT as category_id of table a
+### SQL Tricks
 ```sql
 /* Math */
 -- Even ID number     => (ID%2)=0
