@@ -1,4 +1,50 @@
 # SQL Daily Knowledge
+## Day 2
+### Find all duplicate records in a table
+- For example: table `USERS`
+    - record is considered duplicate if a user name is present more than once
+```sql
+-- USERS table
+-- In this case, Robin (id=4 and 5) are duplicate record)
+create table users
+(
+user_id int primary key,
+user_name varchar(30) not null,
+email varchar(50));
+
+insert into users values
+(1, 'Sumit', 'sumit@gmail.com'),
+(2, 'Reshma', 'reshma@gmail.com'),
+(3, 'Farhana', 'farhana@gmail.com'),
+(4, 'Robin', 'robin@gmail.com'), 
+(5, 'Robin', 'robin@gmail.com');
+```
+- Expect Output: 
+<img src="https://github.com/CodexploreRepo/sql/assets/64508435/719415f6-7bde-459f-ba1f-7804b92c19a8" width=500 >
+
+- Solution:
+    - Step 1: Using `Window Function` to partition the data based on `user_name` and then give a row number to each of the partitioned user name. If a user name exists more than once then it would have multiple row numbers.
+        - ```sql
+            select *,
+                row_number() over (partition by user_name order by user_id) as rn
+            from users 
+            order by user_id
+          ```
+        - ![Screenshot 2023-06-22 at 22 23 25](https://github.com/CodexploreRepo/sql/assets/64508435/c42bff02-8f0b-484e-82d6-673f81e8d918)
+    
+    - Step 2: Using the row number which is other than 1, we can identify the duplicate records. In this case is **Robin**.
+
+```sql
+-- final solution
+select user_id, user_name, email
+from (
+    select *,
+        row_number() over (partition by user_name order by user_id) as rn
+    from users 
+    order by user_id
+    ) x
+where x.rn > 1;
+```
 ## Day 1
 ### SQL Stacking
 ```sql
