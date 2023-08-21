@@ -1,4 +1,26 @@
 # SQL Daily Knowledge
+## Day 3
+- To view table schema/details
+```sql
+SHOW CREATE TABLE table_name
+SHOW CREATE VIEW view_name
+```
+- `WITH temp_table AS` [Common Table Expression (CTE)](https://learnsql.com/blog/what-is-common-table-expression/)
+```sql
+WITH my_cte AS (
+  SELECT a,b,c
+  FROM T1
+)
+SELECT a,c
+FROM my_cte
+WHERE ....
+
+```
+### SQL Optimisation
+#### Join 
+- Join the smaller table in the second part of the join
+- Filter tables before joining
+- Use **partition** column first in the join condition (if possible) before other conditions
 ## Day 2
 ### Find all duplicate records in a table
 - For example: table `USERS`
