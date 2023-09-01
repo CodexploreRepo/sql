@@ -1,5 +1,17 @@
 # SQL Daily Knowledge
 ## Day 3
+- To view how many databases avail
+```sql
+-- To show all the db avail
+SHOW DATABASES
+-- Use a certain db
+USE db_name
+-- show all tables inside "db_name" db
+SHOW TABLES 
+SELECT * FROM table1;
+
+
+```
 - To view table schema/details
 ```sql
 SHOW CREATE TABLE table_name
