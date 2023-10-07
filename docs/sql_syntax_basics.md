@@ -27,3 +27,19 @@ SELECT "title", "format"
 FROM "longlist" 
 WHERE ("year" = 2022 OR "year" = 2023) AND "format" != 'hardcover';
 ```
+### RANGE
+- Use the operators `<`, `>`, `<=` and `>=` in our conditions to match a range of values.
+```sql
+SELECT "title", "author" 
+FROM "longlist" 
+WHERE "year" >= 2019 AND "year" <= 2022;
+```
+- Use keywords `BETWEEN` and `AND` to specify inclusive ranges
+```sql
+SELECT "title", "author" 
+FROM "longlist" 
+WHERE "year" BETWEEN 2019 AND 2022;
+```
+### `NULL`
+- It is possible that tables may have missing data. `NULL` is a type used to indicate that certain data does not have a value, or does not exist in the table.
+- Conditions used with NULL are `IS NULL` and `IS NOT NULL`.
