@@ -15,6 +15,12 @@ LIMIT 10;
 ## `WHERE`
 - The keyword `WHERE` is used to select rows based on a condition
 - Conditions in SQL:  `=` (“equal to”), `!=` (“not equal to”) and `<>` (also “not equal to”)
+- `NOT`
+```sql
+SELECT "title", "format" 
+FROM "longlist" 
+WHERE NOT "format" = 'hardcover'; --NOT ("format" = 'hardcover') is equal to "format" <> 'hardcover'
+``` 
 - Combine conditions: we can use the SQL keywords `AND` and `OR`
 ```sql
 SELECT "title", "format" 
