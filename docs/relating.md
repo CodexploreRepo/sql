@@ -23,6 +23,10 @@
 
 ### Foreign Keys
 - **Foreign key** is a primary key taken from a different table. By referencing the primary key of a different table, it helps relate the tables by forming a link between them.
-  - For example: primary key of the `books` table is now a column in the `ratings` table.
-    - This helps form a one-to-many relationship between the two tables — a book with a title (found in the `books` table) can have multiple ratings (found in the `ratings` table). 
+- Ex 1 (one-to-many): primary key of the `books` table is now a column in the `ratings` table.
+  - This helps form a one-to-many relationship between the two tables — a book with a title (found in the `books` table) can have multiple ratings (found in the `ratings` table). 
 <p align="center"><img width="485" alt="Screenshot 2023-10-07 at 11 14 40 PM" src="https://github.com/CodexploreRepo/sql/assets/64508435/ef47e29f-2c37-4dda-9dba-59bd75a9fc76"></p>
+
+- Ex 2 (many-to-many relationship): a table called `authored` that maps the primary key of `books` (book_id) to the primary key of `authors` (author_id)
+<p align="center"><img width="525" alt="Screenshot 2023-10-07 at 11 21 05 PM" src="https://github.com/CodexploreRepo/sql/assets/64508435/e46176d6-f43b-4557-bf12-867771d86c16"></p>
+
