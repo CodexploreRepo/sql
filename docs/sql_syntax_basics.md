@@ -82,3 +82,19 @@ FROM "longlist"
 ORDER BY "rating" DESC, "votes" ASC
 LIMIT 10;
 ```
+
+## Aggregate Functions
+- `COUNT`, `AVG`, `MIN`, `MAX`, and `SUM` are called aggregate functions and allow us to perform the corresponding operations over multiple rows of data
+- Use `ROUND` to round the result
+- Use `DISTINCT` to only count distinct values
+```sql
+-- use * to select every row and column from the database
+SELECT COUNT(*) 
+FROM "longlist";
+-- use ROUND
+SELECT ROUND(AVG("rating"), 2) AS "average rating" 
+FROM "longlist";
+-- use DISTINCT
+SELECT COUNT(DISTINCT "publisher") 
+FROM "longlist";
+```
