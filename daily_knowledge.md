@@ -1,4 +1,8 @@
 # SQL Daily Knowledge
+## Day 4
+### Best Practices
+- **SQL identifiers**: use double quotes `"` around `table and column names`
+- SQL also has strings and we use single quotes `'` around `strings` to differentiate them from identifiers.
 ## Day 3
 - To view how many databases avail
 ```sql
