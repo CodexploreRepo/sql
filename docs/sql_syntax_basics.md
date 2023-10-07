@@ -72,3 +72,13 @@ SELECT "title"
 FROM "longlist" 
 WHERE "title" LIKE 'T____';
 ```
+
+## `ORDER BY`
+- The `ORDER BY` keyword allows us to organize the returned rows in some specified order
+```sql
+-- can order by multiple cols
+SELECT "title", "rating", "votes" 
+FROM "longlist"
+ORDER BY "rating" DESC, "votes" ASC
+LIMIT 10;
+```
