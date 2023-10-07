@@ -43,3 +43,32 @@ WHERE "year" BETWEEN 2019 AND 2022;
 ### `NULL`
 - It is possible that tables may have missing data. `NULL` is a type used to indicate that certain data does not have a value, or does not exist in the table.
 - Conditions used with NULL are `IS NULL` and `IS NOT NULL`.
+
+### `LIKE`
+- `LIKE` is used to select data that roughly matches the specified string
+  -  `%` matches 0 or more characters around a given string
+  -  `_` matches a single character
+-  Example 1: `%`
+```sql
+-- To select the books with the word “love” in their titles, we can run
+SELECT "title"
+FROM "longlist"
+WHERE "title" LIKE '%love%';
+
+-- To select the books whose titles begin with the word “The”
+SELECT "title" 
+FROM "longlist" 
+WHERE "title" LIKE 'The %';
+```
+- Example 2: `_`
+```sql
+-- To select a book in the table whose name is either “Pyre” or “Pire”
+SELECT "title" 
+FROM "longlist" 
+WHERE "title" LIKE 'P_re';
+
+-- a book in the table whose title begins with “T” and has four letters
+SELECT "title" 
+FROM "longlist" 
+WHERE "title" LIKE 'T____';
+```
