@@ -62,3 +62,31 @@ LEFT JOIN "migrations" ON "migrations"."id" = "sea_lions"."id";
 <p align="center">
 <img width="550" alt="Screenshot 2023-10-09 at 5 09 52 PM" src="https://github.com/CodexploreRepo/sql/assets/64508435/ebb529a2-bb81-47a1-90be-21fa2e02183e">
 </p>
+
+## SET
+### `INTERSECT`
+- For example, in our database of books, we have authors and translators. A person could be either an author or a translator. If the two sets have an intersection, it is also a possible that a person could be both an author and a translator of books.
+```sql
+SELECT "name" FROM "translators"
+INTERSECT
+SELECT "name" FROM "authors";
+```
+<p align="center">
+<img width="422" alt="Screenshot 2023-10-09 at 5 17 42 PM" src="https://github.com/CodexploreRepo/sql/assets/64508435/bbbf0b16-ed91-434c-b84e-1748faa31553">
+</p>
+
+### `UNION`
+- If a person is either an author or a translator, or both, they belong to the union of the two sets. In other words, this set is formed by combining the author and translator sets.
+  -  A minor adjustment to the previous query gives us the profession of the person in the result set, based on whether they are an author or a translator.
+
+```sql
+SELECT 'author' AS "profession", "name" 
+FROM "authors"
+UNION
+SELECT 'translator' AS "profession", "name" 
+FROM "translators";
+```
+<p align="center">
+<img width="388" alt="Screenshot 2023-10-09 at 5 25 11 PM" src="https://github.com/CodexploreRepo/sql/assets/64508435/6f6375b3-5a03-410d-b243-60c6a5af97bc">
+</p>
+
