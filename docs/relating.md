@@ -30,3 +30,32 @@
 - Ex 2 (many-to-many relationship): a table called `authored` that maps the primary key of `books` (book_id) to the primary key of `authors` (author_id)
 <p align="center"><img width="525" alt="Screenshot 2023-10-07 at 11 21 05 PM" src="https://github.com/CodexploreRepo/sql/assets/64508435/e46176d6-f43b-4557-bf12-867771d86c16"></p>
 
+## `JOIN`
+- `JOIN` keyword allows us to combine two or more tables together.
+### INNER `JOIN`
+- Only keep the matched data based on the conditions
+```sql
+SELECT *
+FROM "sea_lions"
+JOIN "migrations" ON "migrations"."id" = "sea_lions"."id";
+```
+### OUTER `JOIN`
+- `OUTER JOIN` is a way of joining tables that allow us to retain certain unmatched IDs
+- an `OUTER JOIN` could lead to empty or NULL values in the joined table.
+#### `LEFT JOIN`
+- `LEFT JOIN` prioritizes the data in the left (or first) table
+```sql
+SELECT *
+FROM "sea_lions"
+LEFT JOIN "migrations" ON "migrations"."id" = "sea_lions"."id";
+```
+<p align="center"><img width="550" alt="Screenshot 2023-10-09 at 5 05 29 PM" src="https://github.com/CodexploreRepo/sql/assets/64508435/d259e6c5-13d9-4916-ab32-1c5ef494fcc4"></p>
+
+- This query would retain all sea lion data from the `sea_lions` table — the left one. Some rows in the joined table could be partially blank. This would happen if the right table didn’t have data for a particular ID.
+
+#### `RIGHT JOIN`
+- `RIGHT JOIN` retains all the rows from the right (or second) table. 
+<p align="center"><img width="550" alt="Screenshot 2023-10-09 at 5 05 29 PM" src="https://github.com/CodexploreRepo/sql/assets/64508435/4ab88656-5928-442a-a5c0-ddb5bd1964f7"></p>
+
+#### `FULL JOIN`
+- `FULL JOIN` allows us to see the entirety of all tables.
