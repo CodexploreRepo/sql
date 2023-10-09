@@ -58,7 +58,7 @@ LEFT JOIN "migrations" ON "migrations"."id" = "sea_lions"."id";
 <p align="center"><img width="550" alt="Screenshot 2023-10-09 at 5 05 29 PM" src="https://github.com/CodexploreRepo/sql/assets/64508435/4ab88656-5928-442a-a5c0-ddb5bd1964f7"></p>
 
 #### `FULL JOIN`
-- `FULL JOIN` allows us to see the entirety of all tables.
+- `FULL JOIN` allows us to see the entirety of all tables (include the unmatched from both tables)
 <p align="center">
-<img width="771" alt="Screenshot 2023-10-09 at 5 09 52 PM" src="https://github.com/CodexploreRepo/sql/assets/64508435/ebb529a2-bb81-47a1-90be-21fa2e02183e">
+<img width="550" alt="Screenshot 2023-10-09 at 5 09 52 PM" src="https://github.com/CodexploreRepo/sql/assets/64508435/ebb529a2-bb81-47a1-90be-21fa2e02183e">
 </p>
