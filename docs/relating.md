@@ -59,3 +59,6 @@ LEFT JOIN "migrations" ON "migrations"."id" = "sea_lions"."id";
 
 #### `FULL JOIN`
 - `FULL JOIN` allows us to see the entirety of all tables.
+<p align="center">
+<img width="771" alt="Screenshot 2023-10-09 at 5 09 52 PM" src="https://github.com/CodexploreRepo/sql/assets/64508435/ebb529a2-bb81-47a1-90be-21fa2e02183e">
+</p>
