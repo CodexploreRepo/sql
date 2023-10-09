@@ -98,3 +98,29 @@ FROM "longlist";
 SELECT COUNT(DISTINCT "publisher") 
 FROM "longlist";
 ```
+
+## `GROUP BY` 
+- Consider the `ratings` table.
+- Example 1: For each book, we want to find the average rating of the book. To do this, we would first need to group ratings together by book and then average the ratings out for each book (each group).
+```sql
+SELECT "book_id", AVG("rating") AS "average rating"
+FROM "ratings"
+GROUP BY "book_id";
+```
+- Example 2: To find how many numbers of ratings each book has
+```sql
+SELECT "book_id", COUNT("rating")
+FROM "ratings"
+GROUP BY "book_id";
+```
+### `HAVING`
+- `HAVING` keyword is used here to specify a condition for the groups
+- instead of `WHERE` (which can only be used to specify conditions for individual rows).
+
+```sql
+SELECT "book_id", ROUND(AVG("rating"), 2) AS "average rating"
+FROM "ratings"
+GROUP BY "book_id"
+HAVING "average rating" > 4.0
+ORDER BY "average rating" DESC;
+```
