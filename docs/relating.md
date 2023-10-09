@@ -75,6 +75,23 @@ SELECT "name" FROM "authors";
 <img width="422" alt="Screenshot 2023-10-09 at 5 17 42 PM" src="https://github.com/CodexploreRepo/sql/assets/64508435/bbbf0b16-ed91-434c-b84e-1748faa31553">
 </p>
 
+- For example, we can find the books that Sophie Hughes and Margaret Jull Costa have translated together.
+  - Each of the nested queries here finds the IDs of the books for one translator.
+  - The `INTERSECT` keyword is used to intersect the resulting sets and give us the books they have collaborated on.
+```sql
+SELECT "book_id" FROM "translated"
+WHERE "translator_id" = (
+    SELECT "id" from "translators"
+    WHERE "name" = 'Sophie Hughes'
+)
+INTERSECT
+SELECT "book_id" FROM "translated"
+WHERE "translator_id" = (
+    SELECT "id" from "translators"
+    WHERE "name" = 'Margaret Jull Costa'
+);
+```
+
 ### `UNION`
 - If a person is either an author or a translator, or both, they belong to the union of the two sets. In other words, this set is formed by combining the author and translator sets.
   -  A minor adjustment to the previous query gives us the profession of the person in the result set, based on whether they are an author or a translator.
@@ -90,3 +107,30 @@ FROM "translators";
 <img width="388" alt="Screenshot 2023-10-09 at 5 25 11 PM" src="https://github.com/CodexploreRepo/sql/assets/64508435/6f6375b3-5a03-410d-b243-60c6a5af97bc">
 </p>
 
+### `EXCEPT`
+- Everyone who is an author and only an author is included in the following set.
+- The `EXCEPT` keyword can be used to find such a set. In other words, the set of translators is subtracted from the set of authors to form this one.
+```sql
+SELECT "name" FROM "authors"
+EXCEPT
+SELECT "name" FROM "translators";
+```
+<p align="center">
+<img width="388" alt="Screenshot 2023-10-09 at 5 28 05 PM" src="https://github.com/CodexploreRepo/sql/assets/64508435/5abb5748-1b7e-4f12-a576-0194446e1761">
+</p>
+
+### Special Case
+- How can we find this set of people who are either authors or translators but not both?
+<p align="center">
+<img width="388" alt="Screenshot 2023-10-09 at 5 29 31 PM" src="https://github.com/CodexploreRepo/sql/assets/64508435/f545602f-ece0-44a3-8839-17a22e0d0f7f">
+</p>
+
+```sql
+(SELECT "name" FROM "authors"
+EXCEPT
+SELECT "name" FROM "translators")
+UNION
+(SELECT "name" FROM "translators"
+EXCEPT
+SELECT "name" FROM "authors")
+```
