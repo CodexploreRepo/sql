@@ -1,6 +1,6 @@
 # Relating
 
-## Entity Relationship Diagrams
+## Entity Relationship (ER) Diagrams
 - There are one-to-one, one-to-many and many-to-many relationships between tables in a database.
 - It is possible to visualize such relationships using an **entity relationship (ER)** diagram.
   - Each table is an entity in our database. The relationships between the tables, or entities, are represented by the verbs that mark the lines connecting entities.
@@ -16,6 +16,30 @@
 <img width="518" alt="Screenshot 2023-10-07 at 10 40 37 PM" src="https://github.com/CodexploreRepo/sql/assets/64508435/29706a17-4967-4a73-a9ea-f533c1b435be">
 </p>
 
+### Translating ER to SQL tables
+- For example: MRT system, our entities (riders and stations) are related. A rider will likely visit multiple stations, and a subway station is likely to have more than one rider. Given this, it will be a many-to-many relationship.
+<p align="center">
+<img width="125" alt="Screenshot 2023-10-10 at 10 33 47 PM" src="https://github.com/CodexploreRepo/sql/assets/64508435/421af2e2-9a10-4d99-b7c6-e7f139953bcc">
+</p>
+
+- SQL commands to create the above schema
+```sql
+CREATE TABLE riders (
+    "id" INTEGER,
+    "name" TEXT
+);
+
+CREATE TABLE stations (
+    "id" INTEGER,
+    "name" TEXT,
+    "line" TEXT
+);
+
+CREATE TABLE visits (
+    "rider_id" INTEGER,
+    "station_id" INTEGER
+);
+```
 ## Keys
 ### Primary Keys
 - **Primary key** is an identifier that is unique for every item in a table.
@@ -45,3 +69,22 @@
 - The process of separating our data in this manner is called `normalizing`.
   - When normalizing, we put each entity in its own table—as we did with riders and subway stations.
   - Any information about a specific entity, for example a rider’s address, goes into the entity’s own table.
+ 
+## `CREATE TABLE`
+### Data Types and Storage Classes
+- A storage class can hold several data types.
+  - For example, these are the data types that fall under the umbrella of the `Integer` storage class.
+<p align="center">
+<img width="344" alt="Screenshot 2023-10-10 at 10 28 06 PM" src="https://github.com/CodexploreRepo/sql/assets/64508435/560b292a-797a-4548-a6aa-0a860f098b86"></p>
+
+- SQLite has five storage classes:
+  - `Null`: nothing, or empty value
+  - `Integer`: numbers without decimal points
+  - `Real`: decimal or floating point numbers
+  - `Text`: characters or strings
+  - `Blob`: Binary Large Object, for storing objects in binary (useful for images, audio etc.)
+
+### Type Affinities
+- `Type affinities` meaning that they try to convert an input value into the type they have an affinity for
+  - For example: Consider a column with a type affinity for Integers. If we try to insert “25” (the number 25 but stored as text) into this column, it will be converted into an integer data type.
+
