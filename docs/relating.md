@@ -118,3 +118,23 @@ CREATE TABLE visits (
 );
 
 ```
+
+### Column Constraints
+- A column constraint is a type of constraint that applies to a specified column in the table.
+  - `CHECK`: allows checking for a condition, like all values in the column must be greater than 0
+  - `DEFAULT`: uses a default value if none is supplied for a row
+  - `NOT NULL`: dictates that a null or empty value cannot be inserted into the column
+  - `UNIQUE`: dictates that every value in this column must be unique
+- Example of Column Constraints:
+  - `DEFAULT CURRENT_TIMESTAMP` — it returns the year, month, day, hour, minute and second combined into one value
+  - `CHECK` on "type" to ensure its value is one of ‘enter’, ‘exit’ and ‘deposit’. 
+```sql
+CREATE TABLE "swipes" (
+    "id" INTEGER,
+    "card_id" INTEGER,
+    "station_id" INTEGER,
+    "type" TEXT NOT NULL CHECK("type" IN ('enter', 'exit', 'deposit')),
+    "datetime" NUMERIC NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "amount" NUMERIC NOT NULL CHECK("amount" != 0),
+);
+```
