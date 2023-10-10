@@ -34,7 +34,7 @@ CREATE TABLE stations (
     "name" TEXT,
     "line" TEXT
 );
-
+-- "visits" relationship is converted to a table
 CREATE TABLE visits (
     "rider_id" INTEGER,
     "station_id" INTEGER
@@ -84,7 +84,37 @@ CREATE TABLE visits (
   - `Text`: characters or strings
   - `Blob`: Binary Large Object, for storing objects in binary (useful for images, audio etc.)
 
-### Type Affinities
+#### Type Affinities
 - `Type affinities` meaning that they try to convert an input value into the type they have an affinity for
   - For example: Consider a column with a type affinity for Integers. If we try to insert “25” (the number 25 but stored as text) into this column, it will be converted into an integer data type.
 
+### Table Constraints
+- `PRIMARY KEY` column must have unique values.
+- `FOREIGN KEY` a constraint on a foreign key value is that it must be found in the primary key column of the related table
+<p align="center">
+<img width="125" alt="Screenshot 2023-10-10 at 10 33 47 PM" src="https://github.com/CodexploreRepo/sql/assets/64508435/421af2e2-9a10-4d99-b7c6-e7f139953bcc">
+</p>
+
+```sql
+CREATE TABLE riders (
+    "id" INTEGER,
+    "name" TEXT,
+    PRIMARY KEY("id")
+);
+
+CREATE TABLE stations (
+    "id" INTEGER,
+    "name" TEXT,
+    "line" TEXT,
+    PRIMARY KEY("id")
+);
+
+CREATE TABLE visits (
+    "id" INTEGER,
+    "rider_id" INTEGER,
+    "station_id" INTEGER,
+    FOREIGN KEY("rider_id") REFERENCES "riders"("id"),
+    FOREIGN KEY("station_id") REFERENCES "stations"("id")
+);
+
+```
