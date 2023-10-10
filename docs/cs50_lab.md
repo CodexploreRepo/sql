@@ -7,4 +7,7 @@
 ### SQLite3
 - `.quit` to quit the terminals
 - `.tables` to list down all the tables in the schema
+- `.schema` SQLite command (not an SQL keyword) that can shed more light on how this database was created.
+  - `.schema books`  to see the schema for a specified table `books`
+- `.read schema.sql` to read and create the schema based on the script `schema.sql`
   
