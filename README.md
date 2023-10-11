@@ -1,5 +1,6 @@
 # SQL
 - [Introduction](./docs/introduction.md)
-- [SQL Syntax Basics](./docs/sql_syntax_basics.md)
 - [Relating](./docs/relating.md)
+- [SQL Syntax - Creation & Insertion](./docs/sql_syntax_creation_insertion.md)
+- [SQL Syntax - Query](./docs/sql_syntax_query.md)
 - [Sub-queries](./docs/subqueries.md)
