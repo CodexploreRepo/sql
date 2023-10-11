@@ -138,3 +138,31 @@ CREATE TABLE "swipes" (
     "amount" NUMERIC NOT NULL CHECK("amount" != 0),
 );
 ```
+
+## `DROP TABLE`
+- to drop (or delete) the existing tables: `DROP TABLE "table_name";`
+
+## Altering Tables
+- Any changes on the Table will start with the keyword `ALTER TABLE "table_name"`
+- Rename table
+```sql
+-- rename "visits" to "swipes"
+ALTER TABLE "visits"
+RENAME TO "swipes";
+```
+- Add columns
+```sql
+-- add column "swipetype" TEXT to "swipes" table
+ALTER TABLE "swipes"
+ADD COLUMN "swipetype" TEXT;
+```
+- Rename column
+```sql
+ALTER TABLE "swipes"
+RENAME COLUMN "swipetype" TO "type";
+```
+- drop (or remove) a column.
+```sql
+ALTER TABLE "swipes"
+RENAME COLUMN "swipetype" TO "type";
+```
