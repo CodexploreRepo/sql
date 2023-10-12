@@ -126,3 +126,57 @@ VALUES
 ('Imaginative landscape', '56.496', NULL),
 ('Peonies and butterfly', '06.1899', '1906-01-01');
 ```
+
+## Deleting Data
+- Delete all the rows that are already within the `collections` table.
+```sql
+DELETE FROM "collections";
+```
+- We can also delete rows that match specific conditions.
+```sql
+DELETE FROM "collections"
+WHERE "title" = 'Spring outing';
+
+DELETE FROM "collections"
+WHERE "acquired" IS NULL;
+
+DELETE FROM "collections"
+WHERE "acquired" < '1909-01-01';
+
+DELETE FROM "created"
+WHERE "artist_id" = (
+    SELECT "id"
+    FROM "artists"
+    WHERE "name" = 'Unidentified artist'
+);
+```
+
+### Cascade Deletion
+- For example: if we choose to delete the **unidentified artist** (with the ID 3), what would happen to the rows in the table `created` with an `artist_id` of 3? 
+<p align="center">
+<img width="524" alt="Screenshot 2023-10-12 at 9 29 21 PM" src="https://github.com/CodexploreRepo/sql/assets/64508435/0380390e-a286-496b-b220-535e03d1878d"></p>
+
+- On running below command, we get `Runtime error: FOREIGN KEY constraint failed (19)`.
+  - This error notifies us that deleting this data would violate the foreign key constraint set up in the `created` table.
+```sql
+DELETE FROM "artists"
+WHERE "name" = 'Unidentified artist';
+```
+
+- SOLUTION: specify the action to be taken when an ID referenced by a foreign key is deleted. To do this, we use the keyword `ON DELETE` followed by the action to be taken.
+  - `ON DELETE RESTRICT`: This restricts us from deleting IDs when the foreign key constraint is violated.
+  - `ON DELETE NO ACTION`: This allows the deletion of IDs that are referenced by a foreign key and nothing happens.
+  - `ON DELETE SET NULL`: This allows the deletion of IDs that are referenced by a foreign key and sets the foreign key references to NULL.
+  - `ON DELETE SET DEFAULT`: This does the same as the previous, but allows us to set a default value instead of NULL.
+  - `ON DELETE CASCADE`: This allows the deletion of IDs that are referenced by a foreign key and also proceeds to cascadingly delete the referencing foreign key rows.
+    - For example, if we used this to delete an artist ID, all the artist’s affiliations with the artwork would also be deleted from the created table.
+
+```sql
+-- add the below code when creating the "created" table 
+FOREIGN KEY("artist_id") REFERENCES "artists"("id") ON DELETE CASCADE
+
+-- Now running the following DELETE statement will not result in an error, and will cascade the deletion from the artists table to the created table:
+DELETE FROM "artists"
+WHERE "name" = 'Unidentified artist';
+```
+
