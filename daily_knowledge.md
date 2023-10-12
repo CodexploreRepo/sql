@@ -1,5 +1,9 @@
 # SQL Daily Knowledge
 ## Day 4
+### Inserting Data
+- SQL can fill out the primary key values automatically. To make use of this functionality, we omit the ID column altogether while inserting a row.
+  - If we delete a row with the primary key 1, SQL will not automatically assign a primary key of 1 to the next inserted row.
+    - Instead it actually selects the highest primary key value in the table and increments it to generate the next primary key value.
 ### Best Practices
 - **SQL identifiers**: use double quotes `"` around `table and column names`
 - SQL also has strings and we use single quotes `'` around `strings` to differentiate them from identifiers.
