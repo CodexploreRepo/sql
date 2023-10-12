@@ -119,7 +119,7 @@ INSERT INTO "collections" ("title", "accession_number", "acquired")
 VALUES ('Farmers working at dawn', '11.6152', '1911-08-03'); -- the "id" will be auto-populated as 2
 ```
 ### Inserting Multiple Rows
-- `INSERT INTO ... VALUES` inserting multiple rows at once in this manner allows the programmer some convenience.
+- `INSERT INTO ... VALUES (row1), (row2), (row3);` inserting multiple rows at once in this manner allows the programmer some convenience.
 ```sql
 INSERT INTO "collections" ("title", "accession_number", "acquired") 
 VALUES 
