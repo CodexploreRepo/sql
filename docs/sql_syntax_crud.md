@@ -179,4 +179,28 @@ FOREIGN KEY("artist_id") REFERENCES "artists"("id") ON DELETE CASCADE
 DELETE FROM "artists"
 WHERE "name" = 'Unidentified artist';
 ```
+## Updating Data
+- The syntax of the update command
+```sql
+UPDATE table
+SET column0=value0, column1=value1, ...
+WHERE conditions
+```
+- For example: in the case of the MFA database, we find out that the painting **“Farmers working at dawn”** originally mapped to an “Unidentified artist” was actually created by the artist **Li Yin**.
+<p align="center"><img width="800" alt="Screenshot 2023-10-12 at 9 40 51 PM" src="https://github.com/CodexploreRepo/sql/assets/64508435/c92eb1c8-4bc3-4e5c-9971-1a42fb232036"></p>
 
+```sql
+UPDATE "created"
+-- update the artist_id col  = the id from the artists table, where name = Li Yin
+SET "artist_id" = (
+    SELECT "id"
+    FROM "artists"
+    WHERE "name" = 'Li Yin'
+)
+-- only update the row which has the collection_id = 'Farmers working at dawn'
+WHERE "collection_id" = (
+    SELECT "id"
+    FROM "collections"
+    WHERE "title" = 'Farmers working at dawn'
+);
+```
