@@ -95,3 +95,34 @@ RENAME COLUMN "swipetype" TO "type";
 ALTER TABLE "swipes"
 RENAME COLUMN "swipetype" TO "type";
 ```
+
+## Inserting Data
+- The SQL statement `INSERT INTO` is used to insert a row of data into a given table.
+```sql
+-- CREATE TABlE Schema
+CREATE TABLE "collections" (
+    "id" INTEGER,
+    "title" TEXT NOT NULL,
+    "accession_number" TEXT NOT NULL UNIQUE,
+    "acquired" NUMERIC,
+    PRIMARY KEY("id")
+);
+-- INSERT
+INSERT INTO "collections" ("id", "title", "accession_number", "acquired")
+VALUES (1, 'Profusion of flowers', '56.257', '1956-04-12');
+```
+- SQL can fill out the primary key values automatically. To make use of this functionality, we omit the ID column altogether while inserting a row.
+  - If we delete a row with the primary key 1, SQL will not automatically assign a primary key of 1 to the next inserted row.
+    - Instead it actually selects the highest primary key value in the table and increments it to generate the next primary key value.
+```sql
+INSERT INTO "collections" ("title", "accession_number", "acquired")
+VALUES ('Farmers working at dawn', '11.6152', '1911-08-03'); -- the "id" will be auto-populated as 2
+```
+### Inserting Multiple Rows
+- `INSERT INTO ... VALUES` inserting multiple rows at once in this manner allows the programmer some convenience.
+```sql
+INSERT INTO "collections" ("title", "accession_number", "acquired") 
+VALUES 
+('Imaginative landscape', '56.496', NULL),
+('Peonies and butterfly', '06.1899', '1906-01-01');
+```
