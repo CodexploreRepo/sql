@@ -5,7 +5,7 @@
 ```sql
 UPDATE "votes" SET "title" = trim("title");
 ```
-- `upper` and `lower`
+- `upper` and `lower` to lowercase & uppercase the string
 ```sql
 UPDATE "votes" SET "title" = upper("title");
 ```
