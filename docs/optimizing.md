@@ -42,9 +42,9 @@ SELECT * FROM "movies" WHERE "title" = 'Cars';
 ### How to find Index Column
 - To understand what kind of index could help speed this query up, we can run `EXPLAIN QUERY PLAN` ahead of the query.
 - For example:
-  - In this query, it starts "SCAN" `people` table in `SUBQUERY 1`
-  - Then it "SCAN"s in `stars` table and return as a list
-  - Before it can "SEARCH" in movies using `rowid` which are the primary key  
+  - In this query, it starts "SCAN" `people` table in `SUBQUERY 1` &#8594; need to create the index for `name` column in `people` table
+  - Then it "SCAN"s in `stars` table and return as a list &#8594; need to create  the index for `person_id` column in `stars` table
+  - Before it can "SEARCH" in movies using `rowid` which are the primary key &#8594; no need as the operation is already "SEARCH"
 ```sql
 EXPLAIN QUERY PLAN
 SELECT "title" FROM "movies"
