@@ -21,4 +21,4 @@
     -- drop temp table once done
     DROP TABLE "temp";
     ```
-  
+- `.timer on` to on the time when execute the query
