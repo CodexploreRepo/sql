@@ -21,7 +21,8 @@ JOIN "books" ON "books"."id" = "authored"."book_id";
   - **aggregating**: running aggregate functions, like finding the sum, and storing the results,
   - **partitioning**: dividing data into logical pieces,
   - **securing**: hiding columns that should be kept secure. While there are other ways in which views can be useful, in this lecture we will focus on the above four.
- 
+> Can views be updated?
+  - No, because views do not have any data in the way that tables do. Views actually pull data from the underlying tables each time they are queried. This means that when an underlying table is updated, the next time the view is queried, it will display updated data from the table!
 ## `CREATE VIEW`
 - To save the virtual table created in the previous step as a view:
 ```sql
