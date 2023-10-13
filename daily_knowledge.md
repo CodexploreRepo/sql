@@ -1,5 +1,15 @@
 # SQL Daily Knowledge
 ## Day 4
+### Update with String SQL Function
+- `trim()` Remove leading and trailing spaces from a string:
+```sql
+UPDATE "votes" SET "title" = trim("title");
+```
+- `upper` and `lower`
+```sql
+UPDATE "votes" SET "title" = upper("title");
+```
+
 ### Inserting Data
 - SQL can fill out the primary key values automatically. To make use of this functionality, we omit the ID column altogether while inserting a row.
   - If we delete a row with the primary key 1, SQL will not automatically assign a primary key of 1 to the next inserted row.
