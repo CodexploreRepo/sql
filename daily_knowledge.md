@@ -1,5 +1,8 @@
 # SQL Daily Knowledge
 ## Day 4
+### What is View ?
+- A view is a virtual table defined by a query and it does not consume much more disk space to create.
+  - The data within a view is still stored in the underlying tables, but still accessible through this simplfied view.
 ### Update with String SQL Function
 - `trim()` Remove leading and trailing spaces from a string:
 ```sql
