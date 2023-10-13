@@ -5,4 +5,4 @@
 - [SQL Syntax - Query](./docs/sql_syntax_query.md)
 - [Sub-queries](./docs/subqueries.md)
 - [Triggers](./docs/triggers.md)
-- [View](./docs/view.md)
+- [Views](./docs/views.md)
