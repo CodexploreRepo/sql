@@ -42,7 +42,7 @@ SELECT * FROM "movies" WHERE "title" = 'Cars';
 ### How to find Index Column
 - To understand what kind of index could help speed this query up, we can run `EXPLAIN QUERY PLAN` ahead of the query.
 - For example:
-  - In this query, it starts "SCAN" `people` table in `SUBQUERY 1` &#8594; need to create the index for `name` column in `people` table
+  - In this query, it starts "SCAN" `people` table in SUBQUERY 1 &#8594; need to create the index for `name` column in `people` table
   - Then it "SCAN"s in `stars` table and return as a list &#8594; need to create  the index for `person_id` column in `stars` table
   - Before it can "SEARCH" in movies using `rowid` which are the primary key &#8594; no need as the operation is already "SEARCH"
 ```sql
@@ -58,6 +58,18 @@ WHERE "id" IN (
 ```
 <p align="center">
 <img width="450" alt="Screenshot 2023-10-13 at 5 28 22 PM" src="https://github.com/CodexploreRepo/sql/assets/64508435/2321113e-b845-42f2-a6fb-468fd5a16d3f">
+</p>
 
+- Let us create the two indexes to speed this query up.
+```sql
+CREATE INDEX "person_index" ON "stars" ("person_id");
+CREATE INDEX "name_index" ON "people" ("name");
+```
+- Now, we run `EXPLAIN QUERY PLAN` with the same nested query. We can observe that
+  - All the scans are now searches using indexes, which is great!
+  - The search on the table `people` uses something called a `COVERING INDEX`
+<p align="center">
+<img width="450" alt="Screenshot 2023-10-13 at 5 28 22 PM" src="https://github.com/CodexploreRepo/sql/assets/64508435/4f4c8b76-5603-4da0-9122-7299f8d500a8">
+</p>
 
 
