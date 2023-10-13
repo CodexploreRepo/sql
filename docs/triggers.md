@@ -8,13 +8,33 @@
 - After the deletion from `collections` table, the deleted item should be updated in `transactions` table & marked as SOLD
 <p align="center"><img width="500" alt="Screenshot 2023-10-13 at 11 19 37 AM" src="https://github.com/CodexploreRepo/sql/assets/64508435/580c99f4-2c88-44ac-8129-6eaacb55993f"></p>
 
-- Trigger Syntax:
+
+## Trigger Syntax
 ```sql
-CREATE TRIGGER "sell"
+CREATE TRIGGER [trigger_name] 
+[BEFORE | AFTER]  {INSERT | UPDATE | DELETE}  ON [table_name]  
+FOR EACH ROW                           -- This specifies a row-level trigger, i.e., the trigger will be executed for each affected row.
+BEGIN 
+[trigger_body]
+END
+```
+- Ex 1: If we delete an item on "collections" table, create a trigger to update that item into the `transactions` table & marked as SOLD
+```sql
+CREATE TRIGGER "sell"                 -- the trigger's name is SELL
 BEFORE DELETE ON "collections"
 FOR EACH ROW
 BEGIN
     INSERT INTO "transactions" ("title", "action")
-    VALUES (OLD."title", 'sold'); -- OLD refers to the deleted row in "collection" table
+    VALUES (OLD."title", 'sold');     -- OLD refers to the deleted row in "collection" table
+END;
+```
+- Ex 2: If we insert an item on "collections" table, create a trigger to update that item into the `transactions` table & marked as BOUGHT
+```sql
+CREATE TRIGGER "buy"                 -- the trigger's name is BUY
+AFTER INSERT ON "collections"
+FOR EACH ROW
+BEGIN
+    INSERT INTO "transactions" ("title", "action")
+    VALUES (NEW."title", 'bought');     -- NEW refers to the newly inserted row in "collection" table
 END;
 ```
