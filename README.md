@@ -6,3 +6,4 @@
 - [Sub-queries](./docs/subqueries.md)
 - [Triggers](./docs/triggers.md)
 - [Views](./docs/views.md)
+- [Optimizing](./docs/optimizing.md)
