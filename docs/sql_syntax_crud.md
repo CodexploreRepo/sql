@@ -204,3 +204,13 @@ WHERE "collection_id" = (
     WHERE "title" = 'Farmers working at dawn'
 );
 ```
+
+### Update with String SQL Function
+- `trim()` Remove leading and trailing spaces from a string:
+```sql
+UPDATE "votes" SET "title" = trim("title");
+```
+- `upper` and `lower`
+```sql
+UPDATE "votes" SET "title" = upper("title");
+```
