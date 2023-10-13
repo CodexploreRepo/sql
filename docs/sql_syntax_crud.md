@@ -1,4 +1,4 @@
-# SQL Syntax - Creation & Insertion
+# SQL Syntax - CRUD
 ## `CREATE TABLE`
 ### Data Types and Storage Classes
 - A storage class can hold several data types.
