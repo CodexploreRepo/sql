@@ -21,6 +21,8 @@ JOIN "books" ON "books"."id" = "authored"."book_id";
   - **aggregating**: running aggregate functions, like finding the sum, and storing the results,
   - **partitioning**: dividing data into logical pieces,
   - **securing**: hiding columns that should be kept secure. While there are other ways in which views can be useful, in this lecture we will focus on the above four.
+ 
+## `CREATE VIEW`
 - To save the virtual table created in the previous step as a view:
 ```sql
 CREATE VIEW "longlist" AS
@@ -29,8 +31,32 @@ JOIN "authored" ON "authors"."id" = "authored"."author_id"
 JOIN "books" ON "books"."id" = "authored"."book_id"
 ORDER BY "title";
 ```
-  - The view created here is called longlist. This view can now be used exactly as we would use a table in SQL.
+- The view created here is called longlist. This view can now be used exactly as we would use a table in SQL.
 ```sql
 SELECT "title" FROM "longlist" WHERE "name" = 'Fernanda Melchor';
+```
+- Each time a view is created, it gets added to the schema.
+### `CREATE TEMPORARY VIEW`
+- To create temporary views that are not stored in the database schema, we can use `CREATE TEMPORARY VIEW`.
+- This command creates a view that exists only for the duration of our connection with the database.
+- temporary views are used when we want to organize data in some way without actually storing that organization long-term.
+```sql
+CREATE TEMPORARY VIEW "average_ratings_by_year" AS
+SELECT "year", ROUND(AVG("rating"), 2) AS "rating" FROM "average_book_ratings" 
+GROUP BY "year";
+```
+## Common Table Expression (CTE)
+- A regular view exists forever in our database schema.
+- A temporary view exists for the duration of our connection with the database.
+- A **CTE** is a view that **exists for a single query alone**.
+
+```sql
+WITH "average_book_ratings" AS (
+    SELECT "book_id", "title", "year", ROUND(AVG("rating"), 2) AS "rating" FROM "ratings"
+    JOIN "books" ON "ratings"."book_id" = "books"."id"
+    GROUP BY "book_id"
+)
+SELECT "year" ROUND(AVG("rating"), 2) AS "rating" FROM "average_book_ratings"
+GROUP BY "year";
 
 ```
