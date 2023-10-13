@@ -179,6 +179,23 @@ FOREIGN KEY("artist_id") REFERENCES "artists"("id") ON DELETE CASCADE
 DELETE FROM "artists"
 WHERE "name" = 'Unidentified artist';
 ```
+
+### Soft Deletion
+-  A soft deletion involves marking a row as deleted instead of removing it from the table.
+-  For example: a piece of art called “Farmers working at dawn” is marked as deleted from the `collections` table by changing the value in the deleted column from 0 to 1.
+<p align="center"><img width="258" alt="Screenshot 2023-10-13 at 4 16 56 PM" src="https://github.com/CodexploreRepo/sql/assets/64508435/63c62d95-ec87-4631-94e2-bc8f9fd7ca60"></p>
+
+- We can create a view to display information about the rows that are not deleted.
+```sql
+CREATE VIEW "current_collections" AS
+SELECT "id", "title", "accession_number", "acquired" 
+FROM "collections" 
+WHERE "deleted" = 0;
+```
+- Now, we have the underlying `collections` table where it contains both current & deleted items, where the `current_collections` contains only current items.
+<p align="center"><img width="500" alt="Screenshot 2023-10-13 at 4 19 30 PM" src="https://github.com/CodexploreRepo/sql/assets/64508435/fc3ee0c8-1a2d-4835-8a06-91e69959a83a"></p>
+
+
 ## Updating Data
 - The syntax of the update command
 ```sql
@@ -187,7 +204,7 @@ SET column0=value0, column1=value1, ...
 WHERE conditions
 ```
 - For example: in the case of the MFA database, we find out that the painting **“Farmers working at dawn”** originally mapped to an “Unidentified artist” was actually created by the artist **Li Yin**.
-<p align="center"><img width="800" alt="Screenshot 2023-10-12 at 9 40 51 PM" src="https://github.com/CodexploreRepo/sql/assets/64508435/c92eb1c8-4bc3-4e5c-9971-1a42fb232036"></p>
+<p align="center"><img width="500" alt="Screenshot 2023-10-12 at 9 40 51 PM" src="https://github.com/CodexploreRepo/sql/assets/64508435/c92eb1c8-4bc3-4e5c-9971-1a42fb232036"></p>
 
 ```sql
 UPDATE "created"
