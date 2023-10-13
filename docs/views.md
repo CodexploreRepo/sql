@@ -26,7 +26,8 @@ JOIN "books" ON "books"."id" = "authored"."book_id";
 CREATE VIEW "longlist" AS
 SELECT "name", "title" FROM "authors"
 JOIN "authored" ON "authors"."id" = "authored"."author_id"
-JOIN "books" ON "books"."id" = "authored"."book_id";
+JOIN "books" ON "books"."id" = "authored"."book_id"
+ORDER BY "title";
 ```
   - The view created here is called longlist. This view can now be used exactly as we would use a table in SQL.
 ```sql
