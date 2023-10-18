@@ -74,7 +74,15 @@ CREATE INDEX "name_index" ON "people" ("name");
 
 ### Covering Index
 - A covering index means that all the information needed for the query can be found within the index itself.
-- From above example, we create `name` as the index in the `people`, so when we perform the filtering use `WHERE "name" = 'Tom Hanks'`
-  - we are looking up relevant information directly in the index instead of (looking up relevant information in the index &#8594; using the index to then search the table)
-
+- From above example, we create `name` as the `name_index` in the `people`, so when we perform the filtering use `WHERE "name" = 'Tom Hanks'`
+  - Also when we are looking up relevant information (`id`), we search directly in the index as `id` is also an index due to primary key 
+- To have our search on the table stars also use a covering index, we can add "movie_id" to the index we created for stars. This will ensure that the information being looked up (movie ID) and the value being searched on (person ID) are both be in the index.
+```sql
+CREATE INDEX "person_index" ON "stars" ("person_id", "movie_id"); # include movie_id as the index along with person_id
+CREATE INDEX "name_index" ON "people" ("name");
+```
+- Running the following will demonstrate that we now have two covering indexes, which should result in a much faster search!
+<p align="center">
+<img width="450" alt="Screenshot 2023-10-13 at 5 28 22 PM" src="https://github.com/CodexploreRepo/sql/assets/64508435/03f4edc5-20cd-4ddb-b137-b96b82599400">
+</p>
 
