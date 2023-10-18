@@ -72,4 +72,9 @@ CREATE INDEX "name_index" ON "people" ("name");
 <img width="450" alt="Screenshot 2023-10-13 at 5 28 22 PM" src="https://github.com/CodexploreRepo/sql/assets/64508435/4f4c8b76-5603-4da0-9122-7299f8d500a8">
 </p>
 
+### Covering Index
+- A covering index means that all the information needed for the query can be found within the index itself.
+- From above example, we create `name` as the index in the `people`, so when we perform the filtering use `WHERE "name" = 'Tom Hanks'`
+  - we are looking up relevant information directly in the index instead of (looking up relevant information in the index &#8594; using the index to then search the table)
+
 
